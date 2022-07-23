@@ -1,5 +1,3 @@
-
-
 array = [3, 1, 5, 1, 6, 9, 7]
 
 placeholder = 0
