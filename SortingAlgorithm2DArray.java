@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Sorting2DArray{
+public class SortingAlgorithm2DArray{
 
      public static void main(String []args){
         
@@ -22,7 +22,7 @@ public class Sorting2DArray{
 			    {
 			        for(int z = 0; z < array2[0].length; z++)
 			        {
-			            s = s + String.valueOf(z);
+			            s = s + String.valueOf(array2[y][z]);
 			        }
 			    }
 				int[] array = new int[s.length()];
