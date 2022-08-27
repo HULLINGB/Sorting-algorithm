@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SortingAlorithm3DArray{
+public class SortingAlgorithm3DArray{
 
      public static void main(String []args){
         
@@ -71,22 +71,35 @@ public class SortingAlorithm3DArray{
 					}
 				}
 
+            System.out.println("{{");
             for(int n = 0; n < array2.length; n++)
             {
-                System.out.print("{{");
+                System.out.print("{");
                 for(int k = 0; k < array2[0].length; k++)
                 {
 					for(int q = 0; q< array2[0].length; q++)
 					{
 						System.out.print(array2[n][k][q]);
-                        if(q < array2[0].length)
+                        if(q < array2[0].length - 1)
 						{
 							System.out.print(", ");
 						}
+						
 					}
-					System.out.println("}");
-                }
-                System.out.println("}");
+					
+					   System.out.print("}");
+					   if(k < array2[0].length - 1)
+					   {
+					        System.out.print(",{");
+					   }
+				}
+				System.out.print("}");
+				if(n < array2.length - 1)
+				{
+				    System.out.print(",{");
+				}
             }
+            
+            System.out.println("}");
      }
 }
