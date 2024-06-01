@@ -1,4 +1,3 @@
-//import java.util.Arrays;
 
 public class SortingAlgorithm{
 
@@ -6,14 +5,6 @@ public class SortingAlgorithm{
         
             int[] array = {4, 5, 4, 1, 4, 6, 0};
 			int space = 0;
-            //Random rand = new Random();
-            /**
-            for(int i = 0; i < array.length; i++)
-            {
-              int n = rand.nextInt(10);
-              array[i] = n;
-            }
-            **/
 			for(int x = 0; x < array.length; x++)
             {
                 for(int y = 0; y < array.length; y++)
