@@ -10,6 +10,7 @@ public class SortingAlgorithm3DArray{
                                    int[] array = new int[dimensionLength * numOfDimensions];
                                   int[] array2 = new int[dimensionLength * numOfDimensions];
                                   int[] array3 = new int[dimensionLength * numOfDimensions];
+                                  int[] array4 = new int[dimensionLength * numOfDimensions * 3];
                                   int[] arrayTrack =  new int[dimensionLength * numOfDimensions];
                                   int[] arrayHolder =  new int[dimensionLength * numOfDimensions];
                                   int[] arrayHolder2 =  new int[dimensionLength * numOfDimensions];
@@ -164,42 +165,38 @@ public class SortingAlgorithm3DArray{
                                               {
                                                     array3[a] = arrayHolder2[a];
                                                }
-                                               str = “”;
+                                              i = 0;
+                                               for(int a = 0; a < array4.length; a++)
+                                               {
+                                                        array4[i] = array[a];
+                                                        i++;
+                                                        array4[i] = array2[a];
+                                                        i++;
+                                                        array4[i] = array3[a];
+                                                        i++;
+                                               }
+                                               i = 0;
                                                for(int a = 0; a < dimensionLength; a++)
                                         {
                                           for(int b = 0; b < dimensionLength; b++)
                                           {
                                          for(int c = 0; c < dimensionLength; c++)
                                          {
-                                               str = array[i] + “, “ + array2[i] + “, “ + array3[i];
-                                               arrayMain[a][b][c] = str;
+                                               arrayMain[a][b][c] = array4[i];
+                                               i++;
                                                }
                                                }
 }
-//Print
-for(int a = 0; a < dimensionLength; a++)
-                                        {
-                                          for(int b = 0; b < dimensionLength; b++)
-                                          {
-                                         for(int c = 0; c < dimensionLength; c++)
-                                         {
-                                               System.out.print(arrayMain[a][b][c]);
-                                               }
-                                               }
-System.out.println(“”);
-
-}
-/**
-            System.out.println("{{");
-            for(int a = 0; a < arrayMain.length; a++)
+                                               System.out.println("{{");
+            for(int a = 0; a < array.length; a++)
             {
                 System.out.print("{");
-                for(int b = 0; b < arrayMain[0].length; b++)
+                for(int b = 0; b < array[0].length; b++)
                 {
-					for(int c = 0; c < arrayMain[0].length; c++)
+					for(int c = 0; c < array[0].length; c++)
 					{
-						System.out.print(arrayMain[a][b][c]);
-                        if(c < arrayMain[0].length - 1)
+						System.out.print(array[a][b][c]);
+                        if(c < array[0].length - 1)
 						{
 							System.out.print(", ");
 						}
@@ -207,18 +204,17 @@ System.out.println(“”);
 					}
 					
 					   System.out.print("}");
-					   if(b < arrayMain[0].length - 1)
+					   if(b < array[0].length - 1)
 					   {
 					        System.out.print(",{");
 					   }
 				}
 				System.out.print("}");
-				if(a < arrayMain.length - 1)
+				if(a < array.length - 1)
 				{
 				    System.out.print(",{");
 				}
             }
             System.out.println("}");
-**/
      }
 }
