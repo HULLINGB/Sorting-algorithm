@@ -164,13 +164,15 @@ public class SortingAlgorithm3DArray{
                                               {
                                                     array3[a] = arrayHolder2[a];
                                                }
+                                               str = “”;
                                                for(int a = 0; a < dimensionLength; a++)
                                         {
                                           for(int b = 0; b < dimensionLength; b++)
                                           {
                                          for(int c = 0; c < dimensionLength; c++)
                                          {
-                                               arrayMain[a][b][c] = 0;
+                                               str = array[i] + “, “ + array2[i] + “, “ + array3[i];
+                                               arrayMain[a][b][c] = str;
                                                }
                                                }
 }
