@@ -3,72 +3,193 @@ import java.util.*;
 public class SortingAlgorithm2DArray{
 
      public static void main(String []args){
-        
-			int[][] array2 = { { 1, 2, 3, 4 , 0, 0, 1}, 
-			                    { 3, 4, 5, 6, 5, 4, 1 } };
+                                   Arraylist<String> list = new Arraylist<>();
+                                   int dimensionLength = 2;
+                                   int numOfDimensions = 2;
+			int[][] arrayMain = new int[dimensionLength][dimensionLength];
+                                   int[] array = new int[dimensionLength * numOfDimensions];
+                                  int[] array2 = new int[dimensionLength * numOfDimensions];
+                                  int[] arrayTrack =  new int[dimensionLength * numOfDimensions];
+                                  int[] arrayHolder =  new int[dimensionLength * numOfDimensions];
 			int number = 0;
-			int c = array2[0].length - 2;
 			int space = 0;
-			
+			int length = array.length;
 			if (array2.getClass().getComponentType().isArray()) {
 				System.out.println("This is a multidimensional array");
 			}else{
 				System.out.println("This is not a multidimensional array");
 			}
-				
-				String s = "";
-			    
-			    for(int y = 0; y < array2.length; y++)
+			    Random rand = new Random();
+				for(int a = 0; a < array2.length; a++)
 			    {
-			        for(int z = 0; z < array2[0].length; z++)
+			        for(int b = 0; b < array[0].length; b++)
 			        {
-			            s = s + String.valueOf(array2[y][z]);
+						for(int c = 0; c < array[0].length; c++)
+						{
+							number = rand.nextInt(10);
+							arrayMain[a][b][c] = number;
+						}
 			        }
 			    }
-				int[] array = new int[s.length()];
-				for (int i = 0; i < s.length(); i++)
+                                       int i = 0;
+                                        for(int a = 0; a < dimensionLength; a++)
+                                        {
+                                          for(int b = 0; b < dimensionLength; b++)
+                                          }
+                                               list[i] = arrayMain[a][b].toString();
+                                               i++;
+                                               }
+}
+                                               i = 0;
+                                               for(int a = i; a < list.size(); a++)
+                                              {
+                                              i = x;
+                                               char[] char = list.get(a).toCharArray();
+                                               for(int b = 0; b < list.size(); b++)
+                                               {
+                                                  if(char[b] == ‘,’)
+                                                 {
+                                                       array[i] = str;
+                                                       str = “”;
+                                                       i++;
+                                                       for(int c = b; c < list.size(); c++)
+                                                      {
+                                                          if(char[c] == ‘,’)
+                                                          {
+                                                          i = 0;
+                                                          array2[i] = str;
+                                                          str = “”;
+                                                                for(int d = c; d < list.size(); d++)
+                                                               {
+                                                          if(char[d] == ‘,’)
+                                                          {
+                                                          i = 0;
+                                                          array3[i] = str;
+                                                          str = “”;
+                                                         }
+                                                          str = str + char[d];
+                                                         }
+                                                         }
+                                                          str = str + char[c];
+                                                         }
+                                                    }
+                                               str = str + char[b];
+                                               }
+                                             x++;
+                                            }
+                                            i = 0;
+				for(int a = 0; a < array.length; a++)
 				{
-					array[i] = s.charAt(i) - '0';
-				}
-				
-				for(int x = 0; x < array.length; x++)
-				{
-					for(int y = 0; y < array.length; y++)
+					for(int b = 0; b < array.length; b++)
 					{
-						if(array[x] < array[y])
+						if(array[a] < array[b])
 						{
-						space = array[x];
-						array[x] = array[y];
-						array[y] = space;
+						space = array[a];
+						array[a] = array[b];
+						array[b] = space;
+                                                                      arrayTrack[i] = b;
+                                                                      i++;
 						}
 					}
 				}
-
-
-				int count = 0;
-				for(int q = 0; q < array2.length; q++)
+                                               for(int a = 0; a < array2.length; a++)
+                                              {
+                                                    arrayHolder[a] = array2[arrayTracker[a]];
+                                                    arrayHolder2[a] = array3[arrayTracker[a]];
+                                               }
+                                              for(int a = 0; a < array2.length; a++)
+                                              {
+                                                    array2[a] = arrayHolder[a];
+                                               }
+                                               for(int a = 0; a < array2.length; a++)
+                                              {
+                                                    arrayHolder[a] = 0;
+                                                    arrayTracker[a] = 0;
+                                               }
+                                               i = 0;
+                                               for(int a = 0; a < array2.length; a++)
 				{
-					for(int v = 0; v < array2[q].length; v++)
+					for(int b = 0; b < array2.length; b++)
 					{
-						array2[q][v] = array[count];
-						count++;
+						if(array2[a] < array2[b])
+						{
+						space = array2[a];
+						array2[a] = array2[b];
+						array2[b] = space;
+                                                                      arrayTrack[i] = b;
+                                                                      i++;
+						}
 					}
-				}
-
-            for(int n = 0; n < array2.length; n++)
+				}	
+                                              for(int a = 0; a < array2.length; a++)
+                                              {
+                                                    arrayHolder2[a] = array3[arrayTracker[a]];
+                                               }
+                                              for(int a = 0; a < array2.length; a++)
+                                              {
+                                                    array2[a] = arrayHolder2[a];
+                                               }
+                                               for(int a = 0; a < array2.length; a++)
+                                              {
+                                                    arrayHolder2[a] = 0;
+                                                    arrayTracker[a] = 0;
+                                               }	
+                                              for(int a = 0; a < array2.length; a++)
+                                              {
+                                                    arrayHolder2[a] = array3[arrayTracker[a]];
+                                               }
+                                              for(int a = 0; a < array2.length; a++)
+                                              {
+                                               str = “”;
+                                               for(int a = 0; a < dimensionLength; a++)
+                                        {
+                                          for(int b = 0; b < dimensionLength; b++)
+                                          {
+                                               str = array[i] + “, “ + array2[i];
+                                               arrayMain[a][b] = str;
+                                               }
+                                               }
+}
+//Print
+for(int a = 0; a < dimensionLength; a++)
+                                        {
+                                          for(int b = 0; b < dimensionLength; b++)
+                                          {                                         
+                                               System.out.print(arrayMain[a][b]);
+                                               }
+System.out.println(“”);
+}
+/**
+            System.out.println("{{");
+            for(int a = 0; a < arrayMain.length; a++)
             {
-                System.out.print("{{");
-                for(int k = 0; k < array2[0].length; k++)
+                System.out.print("{");
+                for(int b = 0; b < arrayMain[0].length; b++)
                 {
-                    System.out.print(array2[n][k]);
-                    if(k < array2[0].length - 1)
-                    {
-                        System.out.print(", ");
-                    }
-                }
-                System.out.println("}");
+					for(int c = 0; c < arrayMain[0].length; c++)
+					{
+						System.out.print(arrayMain[a][b][c]);
+                        if(c < arrayMain[0].length - 1)
+						{
+							System.out.print(", ");
+						}
+						
+					}
+					
+					   System.out.print("}");
+					   if(b < arrayMain[0].length - 1)
+					   {
+					        System.out.print(",{");
+					   }
+				}
+				System.out.print("}");
+				if(a < arrayMain.length - 1)
+				{
+				    System.out.print(",{");
+				}
             }
             System.out.println("}");
-		
+**/
      }
 }
+
