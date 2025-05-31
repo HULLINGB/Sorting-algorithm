@@ -114,23 +114,7 @@ int dimensionLength2 = 2;
 						}
 					}
 				}	
-                                              for(int a = 0; a < array2.length; a++)
-                                              {
-                                                    arrayHolder2[a] = array3[arrayTracker[a]];
-                                               }
-                                              for(int a = 0; a < array2.length; a++)
-                                              {
-                                                    array3[a] = arrayHolder2[a];
-                                               }
-                                               for(int a = 0; a < array2.length; a++)
-                                              {
-                                                    arrayHolder2[a] = 0;
-                                                    arrayTracker[a] = 0;
-                                               }
-                                              for(int a = 0; a < array2.length; a++)
-                                              {
-                                                    arrayHolder2[a] = array3[arrayTracker[a]];
-                                               }
+                                              
                     
                                               i = 0;
                                                for(int a = 0; a < array4.length; a++)
@@ -139,13 +123,12 @@ int dimensionLength2 = 2;
                                                         i++;
                                                         array4[i] = array2[a];
                                                         i++;
-                                                        array4[i] = array3[a];
-                                                        i++;
+                                                        
                                                }
                                                i = 0;
                                                for(int a = 0; a < dimensionLength; a++)
                                         {
-                                          for(int b = 0; b < dimensionLength; b++)
+                                          for(int b = 0; b < dimensionLength2; b++)
                                           {
                                                arrayMain[a][b] = array4[i];
                                                i++;
