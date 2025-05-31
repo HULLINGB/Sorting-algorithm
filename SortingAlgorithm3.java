@@ -8,7 +8,7 @@ public class SortingAlgorithm3DArray{
 int dimensionLength2 = 3;
 int dimensionLength3 = 3;
                                    int numOfDimensions = 3;
-			int[][][] arrayMain = new int[dimensionLength][dimensionLength][dimensionLength];
+			int[][][] arrayMain = new int[dimensionLength][dimensionLength2][dimensionLength3];
                                    int[] array = new int[dimensionLength * dimensionLength2 * dimensionLength3];
                                   int[] array2 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
                                   int[] array3 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
