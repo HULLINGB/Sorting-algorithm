@@ -185,9 +185,9 @@ for(int a = 0; a < dimensionLength; a++)
                                          {
                                                System.out.print(arrayMain[a][b][c]);
                                                }
-System.out.println(“”);
                                                }
 }
+System.out.println(“”);
 /**
             System.out.println("{{");
             for(int a = 0; a < arrayMain.length; a++)
