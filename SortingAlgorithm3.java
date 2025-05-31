@@ -9,10 +9,11 @@ int dimensionLength2 = 3;
 int dimensionLength3 = 3;
                                    int numOfDimensions = 3;
 			int[][][] arrayMain = new int[dimensionLength][dimensionLength2][dimensionLength3];
-                                   int[] array = new int[dimensionLength * dimensionLength2 * dimensionLength3];
-                                  int[] array2 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
-                                  int[] array3 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
-                                  int[] array4 = new int[dimensionLength * dimensionLength2 * dimensionLength3 * numOfDimensions];                     int[] arrayTrack =  new int[dimensionLength * dimensionLength2 * dimensionLength3];
+                                   int[] array = new int[dimensionLength * dimensionLength];
+                                  int[] array2 = new int[dimensionLength2 * dimensionLength2];
+                                  int[] array3 = new int[dimensionLength3 * dimensionLength3];
+                                  int[] array4 = new int[dimensionLength * dimensionLength2 * dimensionLength3 * numOfDimensions];                     int[] arrayTrack =  new int[dimensionLength2 * dimensionLength2];
+int[] arrayTrack2 =  new int[dimensionLength3 * dimensionLength3];
                                   int[] arrayHolder =  new int[dimensionLength * dimensionLength2 * dimensionLength3];
                                   int[] arrayHolder2 =  new int[dimensionLength * dimensionLength2 * dimensionLength3];
 			int number = 0;
@@ -125,14 +126,14 @@ int dimensionLength3 = 3;
 						space = array2[a];
 						array2[a] = array2[b];
 						array2[b] = space;
-                                                                      arrayTrack[i] = b;
+                                                                      arrayTrack2[i] = b;
                                                                       i++;
 						}
 					}
 				}	
                                               for(int a = 0; a < array2.length; a++)
                                               {
-                                                    arrayHolder2[a] = array3[arrayTracker[a]];
+                                                    arrayHolder2[a] = array3[arrayTracker2[a]];
                                                }
                                               for(int a = 0; a < array2.length; a++)
                                               {
@@ -141,7 +142,7 @@ int dimensionLength3 = 3;
                                                for(int a = 0; a < array2.length; a++)
                                               {
                                                     arrayHolder2[a] = 0;
-                                                    arrayTracker[a] = 0;
+                                                    arrayTracker2[a] = 0;
                                                }
                                                i = 0;	
                                                for(int a = 0; a < array3.length; a++)
@@ -153,7 +154,7 @@ int dimensionLength3 = 3;
 						space = array3[a];
 						array3[a] = array3[b];
 						array3[b] = space;
-                                                                      arrayTrack[i] = b;
+                                                                      arrayTrack2[i] = b;
                                                                       i++;
 						}
 					}
