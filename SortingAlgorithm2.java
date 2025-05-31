@@ -7,8 +7,6 @@ public class SortingAlgorithm2DArray{
                                    int dimensionLength = 3;
 int dimensionLength2 = 2;
                                    int numOfDimensions = 2;
-
-
 			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
                                    int[] array = new int[dimensionLength * dimensionLength2];
                                   int[] array2 = new int[dimensionLength * dimensionLength2];
