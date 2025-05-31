@@ -307,40 +307,8 @@ for(int a = 0; a < dimensionLength; a++)
                                                System.out.print(arrayMain[a][b] + “, “);
                                                }
 System.out.println(“”);
-/**
+                  }
 }
-            System.out.println("{{");
-            for(int a = 0; a < arrayMain.length; a++)
-            {
-                System.out.print("{");
-                for(int b = 0; b < arrayMain[0].length; b++)
-                {
-					for(int c = 0; c < arrayMain[0].length; c++)
-					{
-						System.out.print(arrayMain[a][b][c]);
-                        if(c < arrayMain[0].length - 1)
-						{
-							System.out.print(", ");
-						}
-						
-					}
-					
-					   System.out.print("}");
-					   if(b < arrayMain[0].length - 1)
-					   {
-					        System.out.print(",{");
-					   }
-				}
-				System.out.print("}");
-				if(a < arrayMain.length - 1)
-				{
-				    System.out.print(",{");
-				}
-            }
-            System.out.println("}");
-   
-     }
-**/
 }
 
 
