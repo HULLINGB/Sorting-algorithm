@@ -174,7 +174,6 @@ public class SortingAlgorithm3DArray{
                                                }
                                                }
 }
-}
 //Print
 for(int a = 0; a < dimensionLength; a++)
                                         {
