@@ -9,6 +9,8 @@ public class SortingAlgorithm2DArray{
 			int[][] arrayMain = new int[dimensionLength][dimensionLength];
                                    int[] array = new int[dimensionLength * numOfDimensions];
                                   int[] array2 = new int[dimensionLength * numOfDimensions];
+   int[] array4 = new int[dimensionLength * numOfDimensions * 2];
+
                                   int[] arrayTrack =  new int[dimensionLength * numOfDimensions];
                                   int[] arrayHolder =  new int[dimensionLength * numOfDimensions];
 			int number = 0;
