@@ -8,8 +8,8 @@ public class SortingAlgorithm2DArray{
 int dimensionLength2 = 2;
                                    int numOfDimensions = 2;
 			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
-                                   int[] array = new int[dimensionLength * dimensionLength];
-                                  int[] array2 = new int[dimensionLength2 * dimensionLength2];
+                                   int[] array = new int[dimensionLength * dimensionLength2];
+                                  int[] array2 = new int[dimensionLength * dimensionLength2];
                                   int[] array4 = new int[dimensionLength * dimensionLength2 * numOfDimensions];
                                   int[] arrayTrack =  new int[dimensionLength * dimensionLength2];
                                   int[] arrayHolder =  new int[dimensionLength * dimensionLength2];
