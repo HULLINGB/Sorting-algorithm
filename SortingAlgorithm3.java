@@ -5,15 +5,16 @@ public class SortingAlgorithm3DArray{
      public static void main(String []args){
                                    Arraylist<String> list = new Arraylist<>();
                                    int dimensionLength = 3;
+int dimensionLength2 = 3;
+int dimensionLength3 = 3;
                                    int numOfDimensions = 3;
 			int[][][] arrayMain = new int[dimensionLength][dimensionLength][dimensionLength];
-                                   int[] array = new int[dimensionLength * dimensionLength];
-                                  int[] array2 = new int[dimensionLength * dimensionLength];
-                                  int[] array3 = new int[dimensionLength * dimensionLength];
-                                  int[] array4 = new int[dimensionLength * dimensionLength * 3];
-                                  int[] arrayTrack =  new int[dimensionLength * dimensionLength];
-                                  int[] arrayHolder =  new int[dimensionLength * dimensionLength];
-                                  int[] arrayHolder2 =  new int[dimensionLength * dimensionLength];
+                                   int[] array = new int[dimensionLength * dimensionLength2 * dimensionLength3];
+                                  int[] array2 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
+                                  int[] array3 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
+                                  int[] array4 = new int[dimensionLength * dimensionLength2 * dimensionLength3 * numOfDimensions];                     int[] arrayTrack =  new int[dimensionLength * dimensionLength2 * dimensionLength3];
+                                  int[] arrayHolder =  new int[dimensionLength * dimensionLength2 * dimensionLength3];
+                                  int[] arrayHolder2 =  new int[dimensionLength * dimensionLength2 * dimensionLength3];
 			int number = 0;
 			int space = 0;
 			int length = array.length;
@@ -37,9 +38,9 @@ public class SortingAlgorithm3DArray{
                                        int i = 0;
                                         for(int a = 0; a < dimensionLength; a++)
                                         {
-                                          for(int b = 0; b < dimensionLength; b++)
+                                          for(int b = 0; b < dimensionLength2; b++)
                                           {
-                                         for(int c = 0; c < dimensionLength; c++)
+                                         for(int c = 0; c < dimensionLength3; c++)
                                          {
                                                list[i] = arrayMain[a][b][c].toString();
                                                i++;
@@ -178,9 +179,9 @@ public class SortingAlgorithm3DArray{
                                                i = 0;
                                                for(int a = 0; a < dimensionLength; a++)
                                         {
-                                          for(int b = 0; b < dimensionLength; b++)
+                                          for(int b = 0; b < dimensionLength2; b++)
                                           {
-                                         for(int c = 0; c < dimensionLength; c++)
+                                         for(int c = 0; c < dimensionLength3; c++)
                                          {
                                                arrayMain[a][b][c] = array4[i];
                                                i++;
