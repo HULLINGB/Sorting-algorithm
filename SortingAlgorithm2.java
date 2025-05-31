@@ -5,18 +5,19 @@ public class SortingAlgorithm2DArray{
      public static void main(String []args){
                                    Arraylist<String> list = new Arraylist<>();
                                    int dimensionLength = 3;
-                                   int numOfDimensions = 2;
 int dimensionLength2 = 2;
+                                   int numOfDimensions = 2;
 
-			int[][][] arrayMain = new int[dimensionLength][dimensionLength][dimensionLength];
+
+			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
                                    int[] array = new int[dimensionLength * dimensionLength2];
                                   int[] array2 = new int[dimensionLength * dimensionLength2];
                                   int[] array4 = new int[dimensionLength * dimensionLength2 * numOfDimensions];
                                   int[] arrayTrack =  new int[dimensionLength * dimensionLength2];
                                   int[] arrayHolder =  new int[dimensionLength * dimensionLength2];
-                                  int[] arrayHolder2 =  new int[dimensionLength * dimensionLength2];
+        
 			int number = 0;
-			int space = 0;
+			int space = 0
 			int length = array.length;
 			if (array2.getClass().getComponentType().isArray()) {
 				System.out.println("This is a multidimensional array");
