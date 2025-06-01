@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class SortingAlgorithm2DArray{
-
      public static void main(String []args){
                                    Arraylist<String> list = new Arraylist<>();
                                    int dimensionLength = 3;
@@ -36,7 +35,6 @@ ArrayList<Integer> arrayHolder = new ArrayList<>();
                                           for(int b = 0; b < dimensionLength2; b++)
                                           {
                                                list.add(arrayMain[a][b].toString());
-                                               i++;
                                                }
 }
                                                for(int a = i; a < list.size(); a++)
@@ -131,4 +129,5 @@ System.out.println(“”);
 }
 }
 }
+
 
