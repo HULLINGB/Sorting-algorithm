@@ -8,59 +8,51 @@ public class SortingAlgorithm2DArray{
 int dimensionLength2 = 2;
                                    int numOfDimensions = 2;
 			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
-                                   int[] array = new int[dimensionLength * dimensionLength2];
-                                  int[] array2 = new int[dimensionLength * dimensionLength2];
-                                  int[] array4 = new int[dimensionLength * dimensionLength2 * numOfDimensions];
-                                  int[] arrayTrack =  new int[dimensionLength * dimensionLength2];
-                                  int[] arrayHolder =  new int[dimensionLength * dimensionLength2];
-        
+                                   ArrayList<Integer> array = new ArrayList<>();
+ArrayList<Integer> array2 = new ArrayList<>();
+ArrayList<Integer> array4 = new ArrayList<>();
+ArrayList<Integer> arrayTrack = new ArrayList<>();
+ArrayList<Integer> arrayHolder = new ArrayList<>();
 			int number = 0;
 			int space = 0
 			int length = array.length;
-			if (array2.getClass().getComponentType().isArray()) {
+			if (arrayMain.getClass().getComponentType().isArray()) {
 				System.out.println("This is a multidimensional array");
 			}else{
 				System.out.println("This is not a multidimensional array");
 			}
 			    Random rand = new Random();
-				for(int a = 0; a < array2.length; a++)
+				for(int a = 0; a < dimensionLength; a++)
 			    {
-			        for(int b = 0; b < array[0].length; b++)
+			        for(int b = 0; b < dimensionLength2; b++)
 			        {
-						for(int c = 0; c < array[0].length; c++)
-						{
 							number = rand.nextInt(10);
-							arrayMain[a][b][c] = number;
+							arrayMain[a][b] = number;
 						}
-			        }
-			    }
+			       }
                                        int i = 0;
                                         for(int a = 0; a < dimensionLength; a++)
                                         {
                                           for(int b = 0; b < dimensionLength2; b++)
                                           {
-                                               list[i] = arrayMain[a][b].toString();
+                                               list.add(arrayMain[a][b].toString());
                                                i++;
                                                }
 }
-                                               i = 0;
                                                for(int a = i; a < list.size(); a++)
                                               {
-                                              i = x;
                                                char[] char = list.get(a).toCharArray();
                                                for(int b = 0; b < list.size(); b++)
                                                {
                                                   if(char[b] == ‘,’)
                                                  {
-                                                       array[i] = str;
+                                                       array.add(str);
                                                        str = “”;
-                                                       i++;
                                                        for(int c = b; c < list.size(); c++)
                                                       {
                                                           if(char[c] == ‘,’)
                                                           {
-                                                          i = 0;
-                                                          array2[i] = str;
+                                                          array2.add(str);
                                                           str = “”;
                                                          }
                                                          }
@@ -69,53 +61,48 @@ int dimensionLength2 = 2;
                                                     }
                                                str = str + char[b];
                                                }
-                                             x++;
                                             }
-                                            i = 0;
 				for(int a = 0; a < array.length; a++)
 				{
 					for(int b = 0; b < array.length; b++)
 					{
 						if(array[a] < array[b])
 						{
-						space = array[a];
-						array[a] = array[b];
-						array[b] = space;
-                                                                      arrayTrack[i] = b;
-                                                                      i++;
+						space = array.get(a);
+						arrayset(a, array.get(b));
+						array.set(b, space);
+                                                                      arrayTrack.add(b);
 						}
 					}
 				}
-                                               for(int a = 0; a < array2.length; a++)
+                                               for(int a = 0; a < array2.size; a++)
                                               {
-                                                    arrayHolder[a] = array2[arrayTracker[a]];
+                                                    arrayHolder.set(a, array2.get(arrayTracker.get(a));
                                                }
-                                              for(int a = 0; a < array2.length; a++)
+                                              for(int a = 0; a < array2.size; a++)
                                               {
-                                                    array2[a] = arrayHolder[a];
-                                               }
-                                               for(int a = 0; a < array2.length; a++)
-                                              {
-                                                    arrayHolder[a] = 0;
-                                                    arrayTracker[a] = 0;
+                                                    array2.set(a, arrayHolder.get(a));
                                                }
                                                i = 0;
-                                               for(int a = 0; a < array2.length; a++)
+                                               for(int a = 0; a < array2.size; a++)
+                                              {
+                                                    arrayHolder.set(a, 0);
+                                                    arrayTracker.set(a, 0);
+                                               }
+                                               for(int a = 0; a < array2.size; a++)
 				{
 					for(int b = 0; b < array2.length; b++)
 					{
 						if(array2[a] < array2[b])
 						{
-						space = array2[a];
-						array2[a] = array2[b];
-						array2[b] = space;
-                                                                      arrayTrack[i] = b;
+						space = array2.get(a);
+						array2.set(a, array2.get(b));
+						array2.set(b, space);
+                                                                      arrayTrack.set(i, b);
                                                                       i++;
 						}
 					}
 				}	
-                                              
-                    
                                               i = 0;
                                                for(int a = 0; a < array4.length; a++)
                                                {
@@ -123,7 +110,6 @@ int dimensionLength2 = 2;
                                                         i++;
                                                         array4[i] = array2[a];
                                                         i++;
-                                                        
                                                }
                                                i = 0;
                                                for(int a = 0; a < dimensionLength; a++)
