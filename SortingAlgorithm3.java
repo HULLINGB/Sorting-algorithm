@@ -37,7 +37,7 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
 						}
 			        }
 			    }
-                                       int i = 0;
+                                      
                                         for(int a = 0; a < dimensionLength; a++)
                                         {
                                           for(int b = 0; b < dimensionLength2; b++)
