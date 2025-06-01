@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class SortingAlgorithm3DArray{
-
      public static void main(String []args){
                                    Arraylist<String> list = new Arraylist<>();
                                    int dimensionLength = 3;
@@ -37,7 +36,6 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
 						}
 			        }
 			    }
-                                      
                                         for(int a = 0; a < dimensionLength; a++)
                                         {
                                           for(int b = 0; b < dimensionLength2; b++)
@@ -45,14 +43,11 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
                                          for(int c = 0; c < dimensionLength3; c++)
                                          {
                                                list.add(arrayMain[a][b][c].toString());
-                       
                                                }
                                                }
 }
-                                               
                                                for(int a = i; a < list.size(); a++)
                                               {
-                                              
                                                char[] char = list.get(a).toCharArray();
                                                for(int b = 0; b < list.size(); b++)
                                                {
@@ -60,12 +55,10 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
                                                  {
                                                        array.add(str);
                                                        str = “”;
-                                                     
                                                        for(int c = b; c < list.size(); c++)
                                                       {
                                                           if(char[c] == ‘,’)
                                                           {
-                                                          
                                                           array2.add(str);
                                                           str = “”;
                                                                 for(int d = c; d < list.size(); d++)
@@ -84,7 +77,6 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
                                                     }
                                                str = str + char[b];
                                                }
-                                           
                                             }
                                            int i = 0;
 				for(int a = 0; a < array.length; a++)
@@ -205,7 +197,6 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
 						}
 						
 					}
-					
 					   System.out.print("}");
 					   if(b < array2.size - 1)
 					   {
