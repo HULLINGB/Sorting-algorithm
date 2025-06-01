@@ -10,7 +10,7 @@ int dimensionLength2 = 2;
 			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
                                    ArrayList<Integer> array = new ArrayList<>();
 ArrayList<Integer> array2 = new ArrayList<>();
-ArrayList<Integer> array4 = new ArrayList<>();
+int[] array4 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
 ArrayList<Integer> arrayTrack = new ArrayList<>();
 ArrayList<Integer> arrayHolder = new ArrayList<>();
 			int number = 0;
@@ -77,7 +77,7 @@ ArrayList<Integer> arrayHolder = new ArrayList<>();
 				}
                                                for(int a = 0; a < array2.size; a++)
                                               {
-                                                    arrayHolder.set(a, array2.get(arrayTracker.get(a));
+                                                    arrayHolder.set(a, array2.get(arrayTracker.get(a)));
                                                }
                                               for(int a = 0; a < array2.size; a++)
                                               {
