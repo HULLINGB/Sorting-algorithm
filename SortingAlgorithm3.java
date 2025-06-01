@@ -103,8 +103,8 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
 				}
                                                for(int a = 0; a < array2.size; a++)
                                               {
-                                                    arrayHolder.set(a, array2.get(arrayTracker.get(a));
-                                                    arrayHolder2.set(a, array3.get(arrayTracker.get(a));
+                                                    arrayHolder.set(a, array2.get(arrayTracker.get(a)));
+                                                    arrayHolder2.set(a, array3.get(arrayTracker.get(a)));
                                                }
                                               for(int a = 0; a < array2.size; a++)
                                               {
@@ -134,7 +134,7 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
 				}	
                                               for(int a = 0; a < array2.size; a++)
                                               {
-                                                    arrayHolder2.set(a, array3.get(arrayTracker2.get(a));
+                                                    arrayHolder2.set(a, array3.get(arrayTracker2.get(a)));
                                                }
                                               for(int a = 0; a < array2.size; a++)
                                               {
