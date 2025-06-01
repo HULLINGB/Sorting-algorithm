@@ -53,7 +53,6 @@ ArrayList<Integer> arrayHolder = new ArrayList<>();
                                                           array2.add(str);
                                                           str = “”;
                                                          }
-                                                         }
                                                           str = str + char[c];
                                                          }
                                                     }
