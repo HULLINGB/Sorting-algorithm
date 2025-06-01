@@ -9,28 +9,28 @@ int dimensionLength2 = 3;
 int dimensionLength3 = 3;
                                    int numOfDimensions = 3;
 			int[][][] arrayMain = new int[dimensionLength][dimensionLength2][dimensionLength3];
-                                   int[] array = new int[dimensionLength * dimensionLength];
-                                  int[] array2 = new int[dimensionLength * dimensionLength2];
-                                  int[] array3 = new int[dimensionLength * dimensionLength3];
-                                  int[] array4 = new int[dimensionLength * dimensionLength2 * dimensionLength3];                    
-int[] arrayTrack =  new int[dimensionLength * dimensionLength2];
-int[] arrayTrack2 =  new int[dimensionLength * dimensionLength3];
-                                  int[] arrayHolder =  new int[dimensionLength2 * dimensionLength3];
-                                  int[] arrayHolder2 =  new int[dimensionLength * dimensionLength3];
+                                   ArrayList<Integer> array = new ArrayList<>();
+ArrayList<Integer> array2 = new ArrayList<>();
+ArrayList<Integer> array3 = new ArrayList<>();
+int[] array4 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
+ArrayList<Integer> arrayTrack = new ArrayList<>();
+ArrayList<Integer> arrayTrack2 = new ArrayList<>();
+ArrayList<Integer> arrayHolder = new ArrayList<>();
+ArrayList<Integer> arrayHolder2 = new ArrayList<>();
 			int number = 0;
 			int space = 0;
 			int length = array.length;
-			if (array2.getClass().getComponentType().isArray()) {
+			if (arrayMain.getClass().getComponentType().isArray()) {
 				System.out.println("This is a multidimensional array");
 			}else{
 				System.out.println("This is not a multidimensional array");
 			}
 			    Random rand = new Random();
-				for(int a = 0; a < array2.length; a++)
+				for(int a = 0; a < dimensionLength; a++)
 			    {
-			        for(int b = 0; b < array[0].length; b++)
+			        for(int b = 0; b < dimensionLength2; b++)
 			        {
-						for(int c = 0; c < array[0].length; c++)
+						for(int c = 0; c < dimensionLength3; c++)
 						{
 							number = rand.nextInt(10);
 							arrayMain[a][b][c] = number;
@@ -58,7 +58,7 @@ int[] arrayTrack2 =  new int[dimensionLength * dimensionLength3];
                                                {
                                                   if(char[b] == ‘,’)
                                                  {
-                                                       array[i] = str;
+                                                       array.add(str);
                                                        str = “”;
                                                        i++;
                                                        for(int c = b; c < list.size(); c++)
@@ -66,14 +66,14 @@ int[] arrayTrack2 =  new int[dimensionLength * dimensionLength3];
                                                           if(char[c] == ‘,’)
                                                           {
                                                           i = 0;
-                                                          array2[i] = str;
+                                                          array2.add(str);
                                                           str = “”;
                                                                 for(int d = c; d < list.size(); d++)
                                                                {
                                                           if(char[d] == ‘,’)
                                                           {
                                                           i = 0;
-                                                          array3[i] = str;
+                                                          array3.add(str);
                                                           str = “”;
                                                          }
                                                           str = str + char[d];
@@ -91,91 +91,91 @@ int[] arrayTrack2 =  new int[dimensionLength * dimensionLength3];
 				{
 					for(int b = 0; b < array.length; b++)
 					{
-						if(array[a] < array[b])
+						if(array.get(a) < array.get(b))
 						{
-						space = array[a];
-						array[a] = array[b];
-						array[b] = space;
-                                                                      arrayTrack[i] = b;
+						space = array.get(a);
+						array.set(a, array.get(b);
+						array.set(b, space);
+                                                                      arrayTrack.set(i, b);
                                                                       i++;
 						}
 					}
 				}
+                                               for(int a = 0; a < array2.size; a++)
+                                              {
+                                                    arrayHolder.set(a, array2.get(arrayTracker.get(a));
+                                                    arrayHolder2.set(a, array3.get(arrayTracker.get(a));
+                                               }
+                                              for(int a = 0; a < array2.size; a++)
+                                              {
+                                                    array2.set(a, arrayHolder.get(a));
+                                                    array3.set(a, arrayHolder2.get(a));
+                                               }
                                                for(int a = 0; a < array2.length; a++)
                                               {
-                                                    arrayHolder[a] = array2[arrayTracker[a]];
-                                                    arrayHolder2[a] = array3[arrayTracker[a]];
-                                               }
-                                              for(int a = 0; a < array2.length; a++)
-                                              {
-                                                    array2[a] = arrayHolder[a];
-                                                    array3[a] = arrayHolder2[a];
-                                               }
-                                               for(int a = 0; a < array2.length; a++)
-                                              {
-                                                    arrayHolder[a] = 0;
-                                                    arrayHolder2[a] = 0;
-                                                    arrayTracker[a] = 0;
+                                                    arrayHolder.set(a, 0);
+                                                    arrayHolder2.set(a, 0);
+                                                    arrayTracker.set(a, 0);
                                                }
                                                i = 0;
-                                               for(int a = 0; a < array2.length; a++)
+                                               for(int a = 0; a < array2.size; a++)
 				{
-					for(int b = 0; b < array2.length; b++)
+					for(int b = 0; b < array2.size; b++)
 					{
-						if(array2[a] < array2[b])
+						if(array2.get(a) < array2.get(b))
 						{
-						space = array2[a];
-						array2[a] = array2[b];
-						array2[b] = space;
-                                                                      arrayTrack2[i] = b;
+						space = array2.get(a);
+						array2.set(a, array2.get(b));
+						array2.set(b, space);
+                                                                      arrayTrack2.set(i, b);
                                                                       i++;
 						}
 					}
 				}	
-                                              for(int a = 0; a < array2.length; a++)
+                                              for(int a = 0; a < array2.size; a++)
                                               {
-                                                    arrayHolder2[a] = array3[arrayTracker2[a]];
+                                                    arrayHolder2.set(a, array3.get(arrayTracker2.get(a));
                                                }
-                                              for(int a = 0; a < array2.length; a++)
+                                              for(int a = 0; a < array2.size; a++)
                                               {
-                                                    array3[a] = arrayHolder2[a];
+                                                    array3.set(a, arrayHolder2.get(a));
                                                }
-                                               for(int a = 0; a < array2.length; a++)
+                                               for(int a = 0; a < array2.size; a++)
                                               {
-                                                    arrayHolder2[a] = 0;
-                                                    arrayTracker2[a] = 0;
+                                                    arrayHolder2.set(a, 0);
+                                                    arrayTracker2.set(a, 0);
                                                }
                                                i = 0;	
-                                               for(int a = 0; a < array3.length; a++)
+                                               for(int a = 0; a < array3.size; a++)
 				{
-					for(int b = 0; b < array3.length; b++)
+					for(int b = 0; b < array3.size; b++)
 					{
-						if(array3[a] < array3[b])
+						if(array3.get(a) < array3.get(b))
 						{
-						space = array3[a];
-						array3[a] = array3[b];
-						array3[b] = space;
-                                                                      arrayTrack2[i] = b;
+						space = array3.get(a);
+						array3.set(a, array3.get(b));
+						array3.set(b, space);
+                                                                      arrayTrack2.set(i, b);
                                                                       i++;
 						}
 					}
 				}	
-                                              for(int a = 0; a < array2.length; a++)
+                                              for(int a = 0; a < array2.size; a++)
                                               {
-                                                    arrayHolder2[a] = array3[arrayTracker[a]];
+                                                    arrayHolder2.set(a, array3.get(arrayTracker.get(a)));
                                                }
-                                              for(int a = 0; a < array2.length; a++)
+                                              for(int a = 0; a < array2.size; a++)
                                               {
-                                                    array3[a] = arrayHolder2[a];
+                                                    array3.set(a, arrayHolder2.get(a));
                                                }
                                               i = 0;
                                                for(int a = 0; a < array4.length; a++)
                                                {
-                                                        array4[i] = array[a];
+                                                        array4.set(i, array.get(a));
                                                         i++;
-                                                        array4[i] = array2[a];
+                                                        array4.set(i, array2.get(a));
                                                         i++;
-                                                        array4[i] = array3[a];
+                                                        array4.set(i, array3.get(a));
                                                         i++;
                                                }
                                                i = 0;
@@ -191,15 +191,15 @@ int[] arrayTrack2 =  new int[dimensionLength * dimensionLength3];
                                                }
 }
                                                System.out.println("{{");
-            for(int a = 0; a < array.length; a++)
+            for(int a = 0; a < array.size; a++)
             {
                 System.out.print("{");
-                for(int b = 0; b < array[0].length; b++)
+                for(int b = 0; b < array2.size; b++)
                 {
-					for(int c = 0; c < array[0].length; c++)
+					for(int c = 0; c < array3.size; c++)
 					{
 						System.out.print(array[a][b][c]);
-                        if(c < array[0].length - 1)
+                        if(c < array3.size - 1)
 						{
 							System.out.print(", ");
 						}
@@ -207,13 +207,13 @@ int[] arrayTrack2 =  new int[dimensionLength * dimensionLength3];
 					}
 					
 					   System.out.print("}");
-					   if(b < array[0].length - 1)
+					   if(b < array2.size - 1)
 					   {
 					        System.out.print(",{");
 					   }
 				}
 				System.out.print("}");
-				if(a < array.length - 1)
+				if(a < array.size - 1)
 				{
 				    System.out.print(",{");
 				}
