@@ -44,15 +44,15 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
                                           {
                                          for(int c = 0; c < dimensionLength3; c++)
                                          {
-                                               list[i] = arrayMain[a][b][c].toString();
-                                               i++;
+                                               list.add(arrayMain[a][b][c].toString());
+                       
                                                }
                                                }
 }
-                                               i = 0;
+                                               
                                                for(int a = i; a < list.size(); a++)
                                               {
-                                              i = x;
+                                              
                                                char[] char = list.get(a).toCharArray();
                                                for(int b = 0; b < list.size(); b++)
                                                {
@@ -60,19 +60,19 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
                                                  {
                                                        array.add(str);
                                                        str = “”;
-                                                       i++;
+                                                     
                                                        for(int c = b; c < list.size(); c++)
                                                       {
                                                           if(char[c] == ‘,’)
                                                           {
-                                                          i = 0;
+                                                          
                                                           array2.add(str);
                                                           str = “”;
                                                                 for(int d = c; d < list.size(); d++)
                                                                {
                                                           if(char[d] == ‘,’)
                                                           {
-                                                          i = 0;
+                                                          
                                                           array3.add(str);
                                                           str = “”;
                                                          }
@@ -84,9 +84,9 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
                                                     }
                                                str = str + char[b];
                                                }
-                                             x++;
+                                           
                                             }
-                                            i = 0;
+                                           int i = 0;
 				for(int a = 0; a < array.length; a++)
 				{
 					for(int b = 0; b < array.length; b++)
