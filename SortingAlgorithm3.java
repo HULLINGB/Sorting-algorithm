@@ -190,7 +190,7 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
                 {
 					for(int c = 0; c < array3.size; c++)
 					{
-						System.out.print(array[a][b][c]);
+						System.out.print(arrayMain[a][b][c]);
                         if(c < array3.size - 1)
 						{
 							System.out.print(", ");
