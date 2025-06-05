@@ -53,20 +53,22 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
                                                {
                                                   if(char[b] == ‘,’)
                                                  {
-                                                       array.add(str);
+                                                       b = b + 2;
+                                                       array.add(Integer.valueOf(str));
                                                        str = “”;
                                                        for(int c = b; c < list.size(); c++)
                                                       {
+                                                         c = c + 2;
                                                           if(char[c] == ‘,’)
                                                           {
-                                                          array2.add(str);
+                                                          array2.add(Integer.valueOf(str));
                                                           str = “”;
                                                                 for(int d = c; d < list.size(); d++)
                                                                {
                                                           if(char[d] == ‘,’)
                                                           {
-                                                          
-                                                          array3.add(str);
+                                                          d = d + 2;
+                                                          array3.add(Integer.valueOf(str));
                                                           str = “”;
                                                          }
                                                           str = str + char[d];
