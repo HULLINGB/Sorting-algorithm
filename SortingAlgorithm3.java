@@ -49,21 +49,21 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
                                                for(int a = i; a < list.size(); a++)
                                               {
                                                char[] char = list.get(a).toCharArray();
-                                               for(int b = 0; b < list.size(); b++)
+                                               for(int b = 0; b < char.length; b++)
                                                {
                                                   if(char[b] == ‘,’)
                                                  {
                                                        b = b + 2;
                                                        array.add(Integer.valueOf(str));
                                                        str = “”;
-                                                       for(int c = b; c < list.size(); c++)
+                                                       for(int c = b; c < char.length; c++)
                                                       {
                                                          c = c + 2;
                                                           if(char[c] == ‘,’)
                                                           {
                                                           array2.add(Integer.valueOf(str));
                                                           str = “”;
-                                                                for(int d = c; d < list.size(); d++)
+                                                                for(int d = c; d < char.length; d++)
                                                                {
                                                           if(char[d] == ‘,’)
                                                           {
