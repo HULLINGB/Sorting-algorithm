@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SortingAlgorithm2Bracket3DArray{
+public class SortingAlgorithm2BracketInfiniteDArray{
      public static void main(String []args){
                                    Arraylist<String> list = new Arraylist<>();
                                    int bracketLength = 1000;
