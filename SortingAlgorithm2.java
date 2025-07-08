@@ -11,7 +11,7 @@ int bracketLength2 = 3;
 int[] array4 = new int[dimensionLength * dimensionLength2];
 ArrayList<Integer> arrayTrack = new ArrayList<>();
 ArrayList<Integer> arrayHolder = new ArrayList<>();
-
+ int i = 0; 
 			int number = 0;
 			int space = 0; 
 			int length = array.length;
@@ -44,7 +44,7 @@ if(b < dimensionLength2 - 1)
 list.get(a).add(values);
 values = "";
 }
-                                          
+                                        
 
                                                for(int c = 0; c < list.get(a).size(); c++)
                                               {
@@ -54,7 +54,7 @@ values = "";
                                                   if(char[b] == ‘,’)
                                                  {
                                                        b = b + 2;
-                                                       array.get(b).add(Integer.valueOf(str));
+                                                       array.get(i).add(Integer.valueOf(str));
                                                        str = “”;
                                                        
                                                          }
@@ -65,7 +65,7 @@ values = "";
                                                }
                                             }
 }
-                                           int i = 0;
+                                          i = 0;
 				for(int a = 0; a < array.length; a++)
 				{
 					for(int b = 0; b < array.length; b++)
