@@ -28,23 +28,20 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
 			    {
 			        for(int b = 0; b < dimensionLength2; b++)
 			        {
-						for(int c = 0; c < dimensionLength3; c++)
-						{
+						
 							number = rand.nextInt(10);
-							arrayMain[a][b][c] = number;
-						}
+							arrayMain[a][b] = number;
+						
 			        }
 			    }
                                         for(int a = 0; a < dimensionLength; a++)
                                         {
                                           for(int b = 0; b < dimensionLength2; b++)
-                                          {
-                                         for(int c = 0; c < dimensionLength3; c++)
-                                         {
-                                               list.add(arrayMain[a][b][c].toString());
-                                               }
-                                               }
-}
+                                          {       
+                                             values = arrayMain[a][b].toString();
+                                           }
+                                          }
+
                                                for(int a = i; a < list.size(); a++)
                                               {
                                                char[] char = list.get(a).toCharArray();
