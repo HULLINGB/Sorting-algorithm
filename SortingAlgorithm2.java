@@ -54,7 +54,7 @@ for(int a = 0; a < dimensionLength; a++)
                                                   if(char[b] == ‘,’)
                                                  {
                                                        b = b + 2;
-                                                       array.get(i).add(Integer.valueOf(str));
+                                                       array.get(c).add(Integer.valueOf(str));
                                                        str = “”;
                                                        
                                                          }
