@@ -10,13 +10,12 @@ int bracketLength2 = 3;
                                    ArrayList<Integer> array = new ArrayList<>();
 ArrayList<Integer> array2 = new ArrayList<>();
 ArrayList<Integer> array3 = new ArrayList<>();
-int[] array4 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
+int[] array4 = new int[dimensionLength * dimensionLength2];
 ArrayList<Integer> arrayTrack = new ArrayList<>();
-ArrayList<Integer> arrayTrack2 = new ArrayList<>();
 ArrayList<Integer> arrayHolder = new ArrayList<>();
-ArrayList<Integer> arrayHolder2 = new ArrayList<>();
+
 			int number = 0;
-			int space = 0;
+			int space = 0; 
 			int length = array.length;
 			if (arrayMain.getClass().getComponentType().isArray()) {
 				System.out.println("This is a multidimensional array");
