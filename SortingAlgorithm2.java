@@ -7,7 +7,7 @@ public class SortingAlgorithm2Bracket3DArray{
 int bracketLength2 = 3;
                                    int numOfBrackets = 2;
 			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
-                                   ArrayList<Integer> array = new ArrayList<>();
+                                   ArrayList<<Integer>> array = new ArrayList<>();
  
 int[] array4 = new int[dimensionLength * dimensionLength2];
 ArrayList<Integer> arrayTrack = new ArrayList<>();
@@ -36,14 +36,19 @@ ArrayList<Integer> arrayHolder = new ArrayList<>();
                                         {
                                           for(int b = 0; b < dimensionLength2; b++)
                                           {       
-                                             values = arrayMain[a][b].toString();
+                                             values = values + arrayMain[a][b].toString();
 if(b < dimensionLength2)
+{
+  values = values + ", ";
+}
                                            }
-                                          }
+list.add(values);
+values = "";
+                                          
 
-                                               for(int a = i; a < list.size(); a++)
+                                               for(int c = i; c < list.get(a).size(); c++)
                                               {
-                                               char[] char = list.get(a).toCharArray();
+                                               char[] char = list.get(a).get(c).toCharArray();
                                                for(int b = 0; b < char.length; b++)
                                                {
                                                   if(char[b] == ‘,’)
@@ -51,23 +56,7 @@ if(b < dimensionLength2)
                                                        b = b + 2;
                                                        array.add(Integer.valueOf(str));
                                                        str = “”;
-                                                       for(int c = b; c < char.length; c++)
-                                                      {
-                                                         c = c + 2;
-                                                          if(char[c] == ‘,’)
-                                                          {
-                                                          array2.add(Integer.valueOf(str));
-                                                          str = “”;
-                                                                for(int d = c; d < char.length; d++)
-                                                               {
-                                                          if(char[d] == ‘,’)
-                                                          {
-                                                          d = d + 2;
-                                                          array3.add(Integer.valueOf(str));
-                                                          str = “”;
-                                                         }
-                                                          str = str + char[d];
-                                                         }
+                                                       
                                                          }
                                                           str = str + char[c];
                                                          }
