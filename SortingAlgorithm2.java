@@ -8,8 +8,7 @@ int bracketLength2 = 3;
                                    int numOfBrackets = 2;
 			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
                                    ArrayList<Integer> array = new ArrayList<>();
-ArrayList<Integer> array2 = new ArrayList<>();
-ArrayList<Integer> array3 = new ArrayList<>();
+ 
 int[] array4 = new int[dimensionLength * dimensionLength2];
 ArrayList<Integer> arrayTrack = new ArrayList<>();
 ArrayList<Integer> arrayHolder = new ArrayList<>();
@@ -38,6 +37,7 @@ ArrayList<Integer> arrayHolder = new ArrayList<>();
                                           for(int b = 0; b < dimensionLength2; b++)
                                           {       
                                              values = arrayMain[a][b].toString();
+if(b < dimensionLength2)
                                            }
                                           }
 
