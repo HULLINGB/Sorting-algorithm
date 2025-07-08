@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SortingAlgorithm3DArray{
+public class SortingAlgorithm3BracketArray{
      public static void main(String []args){
                                    Arraylist<String> list = new Arraylist<>();
                                    int dimensionLength = 3;
