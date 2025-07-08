@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SortingAlgorithmInfinite{
+public class SortingAlgorithmInfiniteBracketArray{
      public static void main(String []args){
                                    Arraylist<String> list = new Arraylist<>();
                                    int dimensionLength = 3;
@@ -8,7 +8,9 @@ int dimensionLength2 = 3;
 int dimensionLength3 = 3;
                                    int numOfDimensions = 3;
 			int[][][] arrayMain = new int[dimensionLength][dimensionLength2][dimensionLength3];
-                                   int[][] array = int[dimensionLength2][dimensionLength3];
+                                   ArrayList<Integer> array = new ArrayList<>();
+ArrayList<Integer> array2 = new ArrayList<>();
+ArrayList<Integer> array3 = new ArrayList<>();
 int[] array4 = new int[dimensionLength * dimensionLength2 * dimensionLength3];
 ArrayList<Integer> arrayTrack = new ArrayList<>();
 ArrayList<Integer> arrayTrack2 = new ArrayList<>();
@@ -17,7 +19,6 @@ ArrayList<Integer> arrayHolder2 = new ArrayList<>();
 			int number = 0;
 			int space = 0;
 			int length = array.length;
-String values = "";
 			if (arrayMain.getClass().getComponentType().isArray()) {
 				System.out.println("This is a multidimensional array");
 			}else{
@@ -41,15 +42,10 @@ String values = "";
                                           {
                                          for(int c = 0; c < dimensionLength3; c++)
                                          {
-                                               values = arrayMain[a][b][c].toString();
-                                                  if(c == dimensionLength3 - 1)
-                                                       {
-                                                      values = values + ", ";
-                                              }
+                                               list.add(arrayMain[a][b][c].toString());
                                                }
-                                         list.add(values);
-                                                 values = "";              
                                                }
+}
                                                for(int a = i; a < list.size(); a++)
                                               {
                                                char[] char = list.get(a).toCharArray();
@@ -58,9 +54,29 @@ String values = "";
                                                   if(char[b] == ‘,’)
                                                  {
                                                        b = b + 2;
-                                                       array[a][b] = Integer.valueOf(str));
-                                                       str = “";
-                                                 }
+                                                       array.add(Integer.valueOf(str));
+                                                       str = “”;
+                                                       for(int c = b; c < char.length; c++)
+                                                      {
+                                                         c = c + 2;
+                                                          if(char[c] == ‘,’)
+                                                          {
+                                                          array2.add(Integer.valueOf(str));
+                                                          str = “”;
+                                                                for(int d = c; d < char.length; d++)
+                                                               {
+                                                          if(char[d] == ‘,’)
+                                                          {
+                                                          d = d + 2;
+                                                          array3.add(Integer.valueOf(str));
+                                                          str = “”;
+                                                         }
+                                                          str = str + char[d];
+                                                         }
+                                                         }
+                                                          str = str + char[c];
+                                                         }
+                                                    }
                                                str = str + char[b];
                                                }
                                             }
@@ -196,6 +212,5 @@ String values = "";
 				}
             }
             System.out.println("}");
-}
      }
 }
