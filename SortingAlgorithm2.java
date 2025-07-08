@@ -5,9 +5,8 @@ public class SortingAlgorithm2Bracket3DArray{
                                    Arraylist<String> list = new Arraylist<>();
                                    int dimensionLength = 3;
 int dimensionLength2 = 3;
-int dimensionLength3 = 3;
-                                   int numOfDimensions = 3;
-			int[][][] arrayMain = new int[dimensionLength][dimensionLength2][dimensionLength3];
+                                   int numOfBrackets = 3;
+			int[][] arrayMain = new int[dimensionLength][dimensionLength2][dimensionLength3];
                                    ArrayList<Integer> array = new ArrayList<>();
 ArrayList<Integer> array2 = new ArrayList<>();
 ArrayList<Integer> array3 = new ArrayList<>();
