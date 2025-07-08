@@ -8,7 +8,6 @@ int bracketLength2 = 3;
                                    int numOfBrackets = 2;
 			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
                                    ArrayList<<Integer>> array = new ArrayList<>();
- 
 int[] array4 = new int[dimensionLength * dimensionLength2];
 ArrayList<Integer> arrayTrack = new ArrayList<>();
 ArrayList<Integer> arrayHolder = new ArrayList<>();
@@ -42,8 +41,9 @@ if(b < dimensionLength2)
   values = values + ", ";
 }
                                            }
-list.add(values);
+list.get(a).add(values);
 values = "";
+}
                                           
 
                                                for(int c = i; c < list.get(a).size(); c++)
