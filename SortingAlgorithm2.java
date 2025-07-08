@@ -54,7 +54,7 @@ values = "";
                                                   if(char[b] == ‘,’)
                                                  {
                                                        b = b + 2;
-                                                       array.add(Integer.valueOf(str));
+                                                       array.get(c).add(Integer.valueOf(str));
                                                        str = “”;
                                                        
                                                          }
