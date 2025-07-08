@@ -58,7 +58,7 @@ for(int a = 0; a < dimensionLength; a++)
                                                        str = “”;
                                                        
                                                          }
-                                                          str = str + char[c];
+                                                         
                                                          }
                                                     }
                                                str = str + char[b];
