@@ -3,10 +3,10 @@ import java.util.*;
 public class SortingAlgorithm2Bracket3DArray{
      public static void main(String []args){
                                    Arraylist<String> list = new Arraylist<>();
-                                   int dimensionLength = 3;
-int dimensionLength2 = 3;
-                                   int numOfBrackets = 3;
-			int[][] arrayMain = new int[dimensionLength][dimensionLength2][dimensionLength3];
+                                   int bracketLength = 1000;
+int bracketLength2 = 3;
+                                   int numOfBrackets = 2;
+			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
                                    ArrayList<Integer> array = new ArrayList<>();
 ArrayList<Integer> array2 = new ArrayList<>();
 ArrayList<Integer> array3 = new ArrayList<>();
