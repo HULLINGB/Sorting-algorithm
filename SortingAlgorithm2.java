@@ -45,7 +45,8 @@ list.get(a).add(values);
 values = "";
 }
                                         
-
+for(int a = 0; a < dimensionLength; a++)
+                                        {
                                                for(int c = 0; c < list.get(a).size(); c++)
                                               {
                                                char[] char = list.get(a).get(c).toCharArray();
