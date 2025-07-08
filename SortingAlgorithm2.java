@@ -46,7 +46,7 @@ values = "";
 }
                                           
 
-                                               for(int c = i; c < list.get(a).size(); c++)
+                                               for(int c = 0; c < list.get(a).size(); c++)
                                               {
                                                char[] char = list.get(a).get(c).toCharArray();
                                                for(int b = 0; b < char.length; b++)
@@ -54,7 +54,7 @@ values = "";
                                                   if(char[b] == ‘,’)
                                                  {
                                                        b = b + 2;
-                                                       array.get(c).add(Integer.valueOf(str));
+                                                       array.get(b).add(Integer.valueOf(str));
                                                        str = “”;
                                                        
                                                          }
@@ -64,6 +64,7 @@ values = "";
                                                str = str + char[b];
                                                }
                                             }
+}
                                            int i = 0;
 				for(int a = 0; a < array.length; a++)
 				{
