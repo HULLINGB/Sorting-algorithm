@@ -36,7 +36,7 @@ ArrayList<Integer> arrayHolder = new ArrayList<>();
                                           for(int b = 0; b < dimensionLength2; b++)
                                           {       
                                              values = values + arrayMain[a][b].toString();
-if(b < dimensionLength2)
+if(b < dimensionLength2 - 1)
 {
   values = values + ", ";
 }
