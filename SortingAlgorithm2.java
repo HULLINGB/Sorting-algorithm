@@ -41,14 +41,12 @@ if(b < dimensionLength2 - 1)
   values = values + ", ";
 }
                                            }
-list.get(a).add(values);
+list.add(values);
 values = "";
-}                                       
-for(int a = 0; a < dimensionLength; a++)
-                                        {
+}                                                                   
                                                for(int c = 0; c < dimensionLength; c++)
                                               {
-                                               char[] char = list.get(a).get(c).toCharArray();
+                                               char[] char = list.get(c).toCharArray();
                                                for(int b = 0; b < char.length; b++)
                                                {
                                                   if(char[b] == ‘,’)
