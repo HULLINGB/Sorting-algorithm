@@ -8,10 +8,11 @@ int bracketLength2 = 3;
                                    int numOfBrackets = 2;
 			int[][] arrayMain = new int[dimensionLength][dimensionLength2];
                                    ArrayList<<Integer>> array = new ArrayList<>();
-int[] array4 = new int[dimensionLength * dimensionLength2];
+ArrayList<Integer> array4 = new ArrayList<>();
 ArrayList<Integer> arrayTrack = new ArrayList<>();
-ArrayList<Integer> arrayHolder = new ArrayList<>();
+ArrayList<<Integer>> arrayHolder = new ArrayList<>();
  int i = 0; 
+int y = 0;
 			int number = 0;
 			int space = 0; 
 			int length = array.length;
@@ -24,135 +25,62 @@ ArrayList<Integer> arrayHolder = new ArrayList<>();
 				for(int a = 0; a < dimensionLength; a++)
 			    {
 			        for(int b = 0; b < dimensionLength2; b++)
-			        {
-						
+			       {
 							number = rand.nextInt(10);
 							arrayMain[a][b] = number;
-						
 			        }
 			    }
-                                        for(int a = 0; a < dimensionLength; a++)
+                                        for(int a = 0; a < dimensionLength2; a++)
                                         {
-                                          for(int b = 0; b < dimensionLength2; b++)
+                                          for(int b = 0; b < dimensionLength; b++)
                                           {       
-                                             values = values + arrayMain[a][b].toString();
-if(b < dimensionLength2 - 1)
-{
-  values = values + ", ";
-}
+                                             list.add(arrayMain[b][a]);
                                            }
-list.add(values);
-values = "";
-}                                                                   
-                                               for(int c = 0; c < dimensionLength; c++)
-                                              {
-                                               char[] char = list.get(c).toCharArray();
-                                               for(int b = 0; b < char.length; b++)
+                                               for(int c = 0; c < list.size(); c++)
                                                {
-                                                  if(char[b] == ‘,’)
-                                                 {
-                                                       b = b + 2;
-                                                       array.get(c).add(Integer.valueOf(str));
-                                                       str = “”;
-                                                       
-                                                         }
-                                                         
-                                                         }
-                                                    }
-                                               str = str + char[b];
-                                               }
-                                            }
+                                                       array.get(a).add(list.get(c));
+                                                   }
 }
-                                          i = 0;
-				for(int a = 0; a < array.length; a++)
+for(int x = 0; x < dimensionLength2; x++)
+{
+				for(int a = 0; a < array.get(x).size(); a++)
 				{
-					for(int b = 0; b < array.length; b++)
+					for(int b = 0; b < array.get(x).size(); b++)
 					{
-						if(array.get(a) < array.get(b))
+                                                           if(array.get(x).get(a) < array.get(x).get(b))
 						{
-						space = array.get(a);
-						array.set(a, array.get(b);
-						array.set(b, space);
+						space = array.get(x).get(a);
+						array.get(x).set(a, array.get(x).get(b);
+						array.get(x).set(b, space);
                                                                       arrayTrack.set(i, b);
                                                                       i++;
 						}
 					}
 				}
-                                               for(int a = 0; a < array2.size; a++)
+                                               y++;
+                                             for(int k = 0; k < dimensionLength2; k++)
+                                             {
+                                               for(int a = 0; a < array.get(x).size; a++)
                                               {
-                                                    arrayHolder.set(a, array2.get(arrayTracker.get(a)));
-                                                    arrayHolder2.set(a, array3.get(arrayTracker.get(a)));
+                                                    arrayHolder.get(x).set(a, array.get(y).get(arrayTracker.get(a)));
                                                }
-                                              for(int a = 0; a < array2.size; a++)
+                                             }
+                                              for(int a = 0; a < array.get(y).size; a++)
                                               {
-                                                    array2.set(a, arrayHolder.get(a));
-                                                    array3.set(a, arrayHolder2.get(a));
+                                                    array.get(y).set(a, arrayHolder.get(x).get(a));
                                                }
-                                               for(int a = 0; a < array2.length; a++)
+                                              y++;
+                                             for(int a = 0; a < array.get(y).size; a++)
                                               {
-                                                    arrayHolder.set(a, 0);
-                                                    arrayHolder2.set(a, 0);
-                                                    arrayTracker.set(a, 0);
+                                                    array.get(y).set(a, arrayHolder2.get(y).get(a));
                                                }
-                                               i = 0;
-                                               for(int a = 0; a < array2.size; a++)
-				{
-					for(int b = 0; b < array2.size; b++)
-					{
-						if(array2.get(a) < array2.get(b))
-						{
-						space = array2.get(a);
-						array2.set(a, array2.get(b));
-						array2.set(b, space);
-                                                                      arrayTrack2.set(i, b);
-                                                                      i++;
-						}
-					}
-				}	
-                                              for(int a = 0; a < array2.size; a++)
-                                              {
-                                                    arrayHolder2.set(a, array3.get(arrayTracker2.get(a)));
-                                               }
-                                              for(int a = 0; a < array2.size; a++)
-                                              {
-                                                    array3.set(a, arrayHolder2.get(a));
-                                               }
-                                               for(int a = 0; a < array2.size; a++)
-                                              {
-                                                    arrayHolder2.set(a, 0);
-                                                    arrayTracker2.set(a, 0);
-                                               }
-                                               i = 0;	
-                                               for(int a = 0; a < array3.size; a++)
-				{
-					for(int b = 0; b < array3.size; b++)
-					{
-						if(array3.get(a) < array3.get(b))
-						{
-						space = array3.get(a);
-						array3.set(a, array3.get(b));
-						array3.set(b, space);
-                                                                      arrayTrack2.set(i, b);
-                                                                      i++;
-						}
-					}
-				}	
-                                              for(int a = 0; a < array2.size; a++)
-                                              {
-                                                    arrayHolder2.set(a, array3.get(arrayTracker.get(a)));
-                                               }
-                                              for(int a = 0; a < array2.size; a++)
-                                              {
-                                                    array3.set(a, arrayHolder2.get(a));
-                                               }
-                                              i = 0;
-                                               for(int a = 0; a < array4.length; a++)
+                                               (int a = 0; a < array4.length; a++)
                                                {
-                                                        array4.set(i, array.get(a));
+                                                        array4.set(i, array.get(x).get(a));
                                                         i++;
-                                                        array4.set(i, array2.get(a));
+                                                        array4.set(i, array.get(x).get(a));
                                                         i++;
-                                                        array4.set(i, array3.get(a));
+                                                        array4.set(i, array.get(x).get(a));
                                                         i++;
                                                }
                                                i = 0;
@@ -160,9 +88,7 @@ values = "";
                                         {
                                           for(int b = 0; b < dimensionLength2; b++)
                                           {
-                                         for(int c = 0; c < dimensionLength3; c++)
-                                         {
-                                               arrayMain[a][b][c] = array4[i];
+                                               arrayMain[a][b] = array4.get(I);
                                                i++;
                                                }
                                                }
@@ -197,3 +123,4 @@ values = "";
             System.out.println("}");
      }
 }
+
