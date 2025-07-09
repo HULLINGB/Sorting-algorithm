@@ -74,6 +74,7 @@ for(int x = 0; x < dimensionLength2; x++)
                                               {
                                                     array.get(y).set(a, arrayHolder2.get(y).get(a));
                                                }
+}
                                                (int a = 0; a < array4.length; a++)
                                                {
                                                         array4.set(i, array.get(x).get(a));
@@ -92,7 +93,6 @@ for(int x = 0; x < dimensionLength2; x++)
                                                i++;
                                                }
                                                }
-}
                                                System.out.println("{{");
             for(int a = 0; a < array.size; a++)
             {
