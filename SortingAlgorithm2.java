@@ -62,8 +62,8 @@ for(int x = 0; x < bracketLength2; x++)
                                                }
                                                arrayHolder.get(y).clear();
                  }
-n++;
 i = 0;
+n++;
 }
 for(int x = 0; x < bracketLength * bracketLength2; x++)
 {
