@@ -11,9 +11,8 @@ ArrayList<Integer> arrayTrack = new ArrayList<>();
 ArrayList<<Integer>> arrayHolder = new ArrayList<>();
  int i = 0; 
 int n = 0;
-			int number = 0;
-			int space = 0; 
-			int length = array.length;
+			int num = 0;
+			int hold = 0;
 			if (arrayMain.getClass().getComponentType().isArray()) {
 				System.out.println("This is a multidimensional array");
 			}else{
@@ -43,9 +42,9 @@ for(int x = 0; x < bracketLength2; x++)
 					{
                                                                 if(array.get(x).get(a) < array.get(x).get(b))
 			                            {
-						space = array.get(x).get(a);
+						hold = array.get(x).get(a);
 						array.get(x).set(a, array.get(x).get(b);
-						array.get(x).set(b, space);
+						array.get(x).set(b, hold);
                                                                       arrayTrack.set(i, b);
                                                                       i++;
 				                 }
