@@ -2,7 +2,6 @@ import java.util.*;
 
 public class SortingAlgorithm2BracketInfiniteDArray{
      public static void main(String []args){
-                                   Arraylist<String> list = new Arraylist<>();
                                    int bracketLength = 1000;
 int bracketLength2 = 3;
 			int[][] arrayMain = new int[bracketLength][bracketLength2];
@@ -25,22 +24,18 @@ int n = 0;
 			    {
 			        for(int b = 0; b < bracketLength2; b++)
 			       {
-				number = rand.nextInt(10);
-				arrayMain[a][b] = number;
+				num = rand.nextInt(10);
+				arrayMain[a][b] = num;
 			        }
 			    }
                                         for(int a = 0; a < bracketLength2; a++)
                                         {
                                           for(int b = 0; b < bracketLength; b++)
                                           {       
-                                             list.add(arrayMain[b][a]);
+                                             array.get(a).add(arrayMain[b][a]);
                                            }
-                                               for(int c = 0; c < list.size(); c++)
-                                               {
-                                                       array.get(a).add(list.get(c));
-                                                   }
 }
-for(int x = n; x < bracketLength2; x++)
+for(int x = 0; x < bracketLength2; x++)
 {
 				for(int a = 0; a < bracketLength; a++)
 				{
