@@ -42,9 +42,9 @@ int n = 0;
 }
 for(int x = n; x < bracketLength2; x++)
 {
-				for(int a = 0; a < array.get(x).size(); a++)
+				for(int a = 0; a < bracketLength; a++)
 				{
-					for(int b = 0; b < array.get(x).size(); b++)
+					for(int b = 0; b < bracketLength; b++)
 					{
                                                                 if(array.get(x).get(a) < array.get(x).get(b))
 			                            {
@@ -59,11 +59,11 @@ for(int x = n; x < bracketLength2; x++)
                  n++;
                  for(int y = n; y < bracketLength2; y++)
                  {
-                                               for(int a = 0; a < array.get(y).size; a++)
+                                               for(int a = 0; a < bracketLength; a++)
                                               {
                                                     arrayHolder.get(y).set(a, array.get(y).get(arrayTracker.get(a)));
                                                }
-                                              for(int a = 0; a < array.get(y).size; a++)
+                                              for(int a = 0; a < bracketLength; a++)
                                               {
                                                     array.get(y).set(a, arrayHolder.get(y).get(a));
                                                }
@@ -99,4 +99,6 @@ System.out.println();
 }       
      }
 }
+
+
 
