@@ -8,6 +8,10 @@ int bracketLength3 = 4;
 			int[][][] arrayMain = new int[bracketLength][bracketLength2][bracketLength3];
 			int[][] arrayMain2 = new int[bracketLength][bracketLength2];
                                    ArrayList<<Integer>> array = new ArrayList<>();
+ArrayList<Integer> array0 = new ArrayList<>();
+ArrayList<Integer> array1 = new ArrayList<>();
+ArrayList<Integer> array2 = new ArrayList<>();
+ArrayList<Integer> array3 = new ArrayList<>();
 ArrayList<Integer> array4 = new ArrayList<>();
 ArrayList<Integer> arrayTrack = new ArrayList<>();
 ArrayList<<Integer>> arrayHolder = new ArrayList<>();
@@ -34,13 +38,26 @@ for(int z = 0; z < bracketLength; z++)
 				arrayMain2[a][b] = num;
 			        }
 			    }
-                                        for(int a = 0; a < bracketLength3; a++)
+                                        for(int a = 0; a < bracketLength2; a++)
                                         {
-                                          for(int b = 0; b < bracketLength2; b++)
-                                          {       
-                                             array.get(a).add(arrayMain2[b][a]);
+                       array0.add(arrayMain[a][0]);
                                            }
-}
+for(int a = 0; a < bracketLength2; a++)
+                                        {
+                       array1.add(arrayMain[a][1]);
+                                           }
+for(int a = 0; a < bracketLength2; a++)
+                                        {
+                       array2.add(arrayMain[a][2]);
+                                           }
+for(int a = 0; a < bracketLength2; a++)
+                                        {
+                       array3.add(arrayMain[a][3]);
+                                           }
+array.add(array0);
+array.add(array1);
+array.add(array2);
+array.add(array3);
 for(int x = 0; x < bracketLength3; x++)
 {
             for( ; ; )
