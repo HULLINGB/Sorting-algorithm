@@ -65,7 +65,7 @@ for(int x = 0; x < bracketLength2; x++)
                                                     array[a][y] = arrayHolder[a][y];
                                                }
                               }
-                       if(c == bracketLength - 1)
+                       if(c == bracketLength)
                        {
                              c = 0;
                         }
