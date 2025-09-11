@@ -51,7 +51,7 @@ for(int x = 0; x < bracketLength3; x++)
 					{
                                                                 if(e > -1 && c < bracketLength2 - 1)
                                                                 {
-                                                                    if(array.get(e).get(a) < array.get(e).get(c))
+                                                                    if(array.get(e).get(a) !=  array.get(e).get(c))
                                                                     {
                                                                         brk = true;
                                                                     }
