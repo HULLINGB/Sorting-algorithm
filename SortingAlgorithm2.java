@@ -74,10 +74,7 @@ for( ; ; )
                                                }
                               }
                          arrayTrack.clear();
-                       if(c == bracketLength - 1)
-                       {
                              c = 0;
-                        }
                       if(brk == true)
                       {
                            brk = false;
