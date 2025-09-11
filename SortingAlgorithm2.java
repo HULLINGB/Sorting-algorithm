@@ -119,7 +119,7 @@ for(int b = 0; b < bracketLength2; b++)
    System.out.print(arrayMain[a][b]);
 if(b < bracketLength2 - 1)
 {
-System.out.print(“, “);
+System.out.print(", ");
 }
 System.out.println();
 }
