@@ -136,7 +136,7 @@ for(int c = 0; c < bracketLength3; c++)
    System.out.print(arrayMain[a][b][c]);
 if(c < bracketLength3 - 1)
 {
-System.out.print(“, “);
+System.out.print(", ");
 }
 System.out.println();
 }
