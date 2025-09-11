@@ -14,7 +14,7 @@ int c = 1;
 boolean brk = false;
 			int num = 0;
 			int hold = 0;
-			if (arrayMain.getClass().getComponentType().isArray()) {
+			if (array.getClass().getComponentType().isArray()) {
 				System.out.println("This is a multidimensional array");
 			}else{
 				System.out.println("This is not a multidimensional array");
@@ -93,6 +93,8 @@ System.out.println();
 }       
      }
 }
+
+
 
 
 
