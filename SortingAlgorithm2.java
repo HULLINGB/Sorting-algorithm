@@ -79,27 +79,12 @@ for(int x = 0; x < bracketLength2; x++)
 i = 0;
 n++;
 e++;
-}
-for(int x = 0; x < bracketLength * bracketLength2; x++)
-{
-                                              for(int a = 0; a < array.get(1).size() * bracketLength2; a++)
-                                               {
-                                                        array4.add(array[a][x]);
-                                               }
-}
-                                               for(int a = 0; a < bracketLength; a++)
-                                        {
-                                          for(int b = 0; b < bracketLength2; b++)
-                                          {
-                                               arrayMain[a][b] = array4.get(i);
-                                               i++;
-                                          }
-                                        }
+}                                   
 		for(int a = 0; a < bracketLength; a++)
 {	
 for(int b = 0; b < bracketLength2; b++)
 {
-   System.out.print(arrayMain[a][b]);
+   System.out.print(array[a][b]);
 if(b < bracketLength2 - 1)
 {
 System.out.print(", ");
@@ -109,6 +94,8 @@ System.out.println();
 }       
      }
 }
+
+
 
 
 
