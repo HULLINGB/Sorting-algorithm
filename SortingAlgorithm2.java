@@ -28,10 +28,10 @@ boolean brk = false;
 				array[a][b] = num;
 			        }
 			    }
-for(int x = 0; x < bracketLength2; x++)
+for( ; ; )
 {
-            for( ; ; )
-            {
+                    for(int x = 0; x < bracketLength2; x++)
+                    {
 				for(int a = c; a < bracketLength; a++)
 				{
 					for(int b = c; b < bracketLength; b++)
@@ -40,7 +40,8 @@ for(int x = 0; x < bracketLength2; x++)
                                                                 {
                                                                     if(array[a][e] != array[c][e])                   
                                                                    {                                                                      
-                                                                         brk = true;                             
+                                                                         brk = true;        
+                                                                         e++;                     
                                                                     }                                                        
                                                                 }
                                                                 if(brk == true)
@@ -83,6 +84,11 @@ for(int x = 0; x < bracketLength2; x++)
                            break;
                        }
               }
+                      if(brk == true)
+                      {
+                           brk = false;
+                           break;
+                       }
 n++;
 e++;
 }                                   
