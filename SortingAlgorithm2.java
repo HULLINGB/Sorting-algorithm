@@ -3,7 +3,7 @@ import java.util.*;
 public class Sort2Bracket4DArray{
      public static void main(String []args){
                                    int bracketLength = 1000;
-int bracketLength2 = 4;
+int bracketLength2 = 3;
 			int[][] array = new int[bracketLength][bracketLength2];
 ArrayList<Integer> arrayTrack = new ArrayList<>();
 int[][] arrayHolder = new int[bracketLength][bracketLength2];                             
@@ -74,20 +74,20 @@ for( ; ; )
                                                }
                               }
                          arrayTrack.clear();
-                             c = 0;
                              e = n;
                       if(brk == true)
                       {
                            brk = false;
                            break;
                        }
-              }
+}
                       if(brk == true)
                       {
                            brk = false;
                            break;
                        }
 n++;
+c = 0;
 }                                   
 		for(int a = 0; a < bracketLength; a++)
 {	
