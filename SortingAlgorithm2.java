@@ -86,7 +86,10 @@ for( ; ; )
                            brk = false;
                            break;
                        }
+if(n < bracketLength2 - 1)
+{
 n++;
+}
 c = 0;
 }                                   
 		for(int a = 0; a < bracketLength; a++)
