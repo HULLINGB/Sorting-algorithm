@@ -50,6 +50,10 @@ for(int a = 0; a < bracketLength2; a++)
                                         {
                        array3.add(arrayMain[a][3]);
                                            }
+array.add(array0);
+array.add(array1);
+array.add(array2);
+array.add(array3);
 for(int x = 0; x < bracketLength2; x++)
 {
             for( ; ; )
