@@ -6,6 +6,10 @@ public class SortingAlgorithm2BracketInfiniteDArray{
 int bracketLength2 = 3;
 			int[][] arrayMain = new int[bracketLength][bracketLength2];
                                    ArrayList<ArrayList<Integer>> array = new ArrayList<>();
+ArrayList<Integer> array0 = new ArrayList<>();
+ArrayList<Integer> array1 = new ArrayList<>();
+ArrayList<Integer> array2 = new ArrayList<>();
+ArrayList<Integer> array3 = new ArrayList<>();
 ArrayList<Integer> array4 = new ArrayList<>();
 ArrayList<Integer> arrayTrack = new ArrayList<>();
 ArrayList<ArrayList<Integer>> arrayHolder = new ArrayList<>();
@@ -32,11 +36,20 @@ boolean brk = false;
 			    }
                                         for(int a = 0; a < bracketLength2; a++)
                                         {
-                                          for(int b = 0; b < bracketLength; b++)
-                                          {       
-                                             array.get(a).add(arrayMain[b][a]);
+                       array0.add(arrayMain[a][0]);
                                            }
-}
+for(int a = 0; a < bracketLength2; a++)
+                                        {
+                       array1.add(arrayMain[a][1]);
+                                           }
+for(int a = 0; a < bracketLength2; a++)
+                                        {
+                       array2.add(arrayMain[a][2]);
+                                           }
+for(int a = 0; a < bracketLength2; a++)
+                                        {
+                       array3.add(arrayMain[a][3]);
+                                           }
 for(int x = 0; x < bracketLength2; x++)
 {
             for( ; ; )
