@@ -11,6 +11,8 @@ ArrayList<Integer> arrayTrack = new ArrayList<>();
 ArrayList<<Integer>> arrayHolder = new ArrayList<>();
  int i = 0; 
 int n = 0;
+int e = -1;
+int c = 1;
 			int num = 0;
 			int hold = 0;
 			if (arrayMain.getClass().getComponentType().isArray()) {
@@ -36,34 +38,63 @@ int n = 0;
 }
 for(int x = 0; x < bracketLength2; x++)
 {
-				for(int a = 0; a < bracketLength; a++)
+            for( ; ; )
+            {
+				for(int a = c; a < bracketLength; a++)
 				{
-					for(int b = 0; b < bracketLength; b++)
+					for(int b = c; b < bracketLength; b++)
 					{
+                                                                if(e > -1 && c < dimensionLength - 1)
+                                                                {
+                                                                    if(array.get(e).get(a) < array.get(e).get(c))
+                                                                    {
+                                                                        break = true;
+                                                                    }
+                                                                }
+                                                                if(break == true)
+                                                                {
+                                                                     break;
+                                                                }
                                                                 if(array.get(x).get(a) < array.get(x).get(b))
 			                            {
 						hold = array.get(x).get(a);
-						array.get(x).set(a, array.get(x).get(b);
+						array.get(x).set(a, array.get(x).get(b));
 						array.get(x).set(b, hold);
                                                                       arrayTrack.set(i, b);
                                                                       i++;
 				                 }
 					}
+                                                          if(break == true)
+                                                          {
+                                                              break;
+                                                          }
+                                                          c++;
 				}
-                 for(int y = n; y < bracketLength2; y++)
-                 {
-                                               for(int a = 0; a < bracketLength; a++)
+                             for(int y = n; y < bracketLength2; y++)
+                             {
+                                               for(int a = c; a < bracketLength; a++)
                                               {
                                                     arrayHolder.get(y).set(a, array.get(y).get(arrayTracker.get(a)));
                                                }
-                                              for(int a = 0; a < bracketLength; a++)
+                                              for(int a = c; a < bracketLength; a++)
                                               {
                                                     array.get(y).set(a, arrayHolder.get(y).get(a));
                                                }
                                                arrayHolder.get(y).clear();
-                 }
+                              }
+                       if(c == dimensionLength - 1)
+                       {
+                             c = 0;
+                        }
+                      if(break == true)
+                      {
+                           break = false;
+                           break;
+                       }
+              }
 i = 0;
 n++;
+e++;
 }
 for(int x = 0; x < bracketLength * bracketLength2; x++)
 {
