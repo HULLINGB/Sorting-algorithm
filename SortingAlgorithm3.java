@@ -15,6 +15,7 @@ ArrayList<<Integer>> arrayHolder = new ArrayList<>();
 int n = 0;
 int e = -1;
 int c = 1;
+boolean brk = false;
 			int num = 0;
 			int hold = 0;
 			if (arrayMain.getClass().getComponentType().isArray()) {
@@ -52,10 +53,10 @@ for(int x = 0; x < bracketLength3; x++)
                                                                 {
                                                                     if(array.get(e).get(a) < array.get(e).get(c))
                                                                     {
-                                                                        break = true;
+                                                                        brk = true;
                                                                     }
                                                                 }
-                                                                if(break == true)
+                                                                if(brk == true)
                                                                 {
                                                                      break;
                                                                 }
@@ -68,7 +69,7 @@ for(int x = 0; x < bracketLength3; x++)
                                                                       i++;
 				                 }
 					}
-                                                          if(break == true)
+                                                          if(brk == true)
                                                           {
                                                               break;
                                                           }
@@ -90,9 +91,9 @@ for(int x = 0; x < bracketLength3; x++)
                        {
                              c = 0;
                         }
-                      if(break == true)
+                      if(brk == true)
                       {
-                           break = false;
+                           brk = false;
                            break;
                        }
               }
