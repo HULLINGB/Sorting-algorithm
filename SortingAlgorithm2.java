@@ -36,16 +36,23 @@ for(int x = 0; x < bracketLength2; x++)
 				{
 					for(int b = c; b < bracketLength; b++)
 					{
-                                                                if(e > -1 && c < bracketLength - 1)
+                                                                if(e > -1)
                                                                 {
-                                                                    if(array[a][e] == array[c][e])                                                             {                                                                      brk = true;                                                         }                                                        }
+                                                                    if(array[a][e] == array[c][e])                   
+                                                                   {                                                                      
+                                                                         brk = true;                             
+                                                                    }                                                        
+                                                                }
                                                                 if(brk == true)
-                                                                {                                                               break;                                                        }
+                                                                {                                                               
+                                                                      break;                                                      
+                                                                }
                                                                 if(array[a][x] < array[b][x])
 			                            {
 						hold = array[a][x];
 						array[a][x] = array[b][x];
-						array[b][x] = hold;                                        arrayTrack.add(b);                                                                      i++;
+						array[b][x] = hold;                                       
+                                                                       arrayTrack.add(b);                                                                
 				                 }
 					}
                                                           if(brk == true)
@@ -65,7 +72,8 @@ for(int x = 0; x < bracketLength2; x++)
                                                     array[a][y] = arrayHolder[a][y];
                                                }
                               }
-                       if(c == bracketLength)
+                         arrayTrack.clear();
+                       if(c == bracketLength - 1)
                        {
                              c = 0;
                         }
@@ -75,7 +83,6 @@ for(int x = 0; x < bracketLength2; x++)
                            break;
                        }
               }
-i = 0;
 n++;
 e++;
 }                                   
