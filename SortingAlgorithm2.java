@@ -30,9 +30,9 @@ boolean brk = false;
 				arrayMain[a][b] = num;
 			        }
 			    }
-                                        for(int a = 0; a < bracketLength2; a++)
+                                        for(int a = 0; a < bracketLength; a++)
                                         {
-                                          for(int b = 0; b < bracketLength; b++)
+                                          for(int b = 0; b < bracketLength2; b++)
                                           {       
                                              array.get(a).add(arrayMain[b][a]);
                                            }
