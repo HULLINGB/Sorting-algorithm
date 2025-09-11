@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SortingAlgorithm2BracketInfiniteDArray{
+public class Sort2Bracket4DArray{
      public static void main(String []args){
                                    int bracketLength = 1000;
 int bracketLength2 = 3;
@@ -78,7 +78,7 @@ for(int x = 0; x < bracketLength2; x++)
 						hold = array.get(x).get(a);
 						array.get(x).set(a, array.get(x).get(b));
 						array.get(x).set(b, hold);
-                                                                      arrayTrack.set(i, b);
+                                                                      arrayTrack.add(b);
                                                                       i++;
 				                 }
 					}
