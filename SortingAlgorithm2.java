@@ -58,7 +58,7 @@ for(int x = 0; x < bracketLength2; x++)
                              {
                                                for(int a = c; a < bracketLength; a++)
                                               {
-                                                    arrayHolder[a][y] = array[arrayTrack.get(a)][y]);
+                                                    arrayHolder[a][y] = array[arrayTrack.get(a)][y];
                                                }
                                               for(int a = c; a < bracketLength; a++)
                                               {
