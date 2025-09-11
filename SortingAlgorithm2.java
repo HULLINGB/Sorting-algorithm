@@ -30,13 +30,13 @@ boolean brk = false;
 			    }
 for( ; ; )
 {
-                    for(int x = 0; x < bracketLength2; x++)
+                    for(int x = n; x < bracketLength2; x++)
                     {
 				for(int a = c; a < bracketLength; a++)
 				{
 					for(int b = c; b < bracketLength; b++)
 					{
-                                                                if(e > -1)
+                                                                if(e > -1 && e < bracketLength2)
                                                                 {
                                                                     if(array[a][e] != array[c][e])                   
                                                                    {                                                                      
