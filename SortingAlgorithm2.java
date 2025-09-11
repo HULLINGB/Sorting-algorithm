@@ -49,7 +49,7 @@ for(int x = 0; x < bracketLength2; x++)
                                                                 {
                                                                     if(array.get(e).get(a) != array.get(e).get(c))
                                                                     {
-                                                                        break = true;
+                                                                        brk = true;
                                                                     }
                                                                 }
                                                                 if(brk == true)
