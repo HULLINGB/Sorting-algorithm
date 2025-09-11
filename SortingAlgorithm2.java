@@ -3,9 +3,8 @@ import java.util.*;
 public class Sort2Bracket4DArray{
      public static void main(String []args){
                                    int bracketLength = 1000;
-int bracketLength2 = 34;
+int bracketLength2 = 3;
 			int[][] array = new int[bracketLength][bracketLength2];
-ArrayList<Integer> array4 = new ArrayList<>();
 ArrayList<Integer> arrayTrack = new ArrayList<>();
 int[][] arrayHolder = new int[bracketLength][bracketLength2];                             
  int i = 0; 
