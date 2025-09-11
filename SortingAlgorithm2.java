@@ -47,7 +47,7 @@ for(int x = 0; x < bracketLength2; x++)
 					{
                                                                 if(e > -1 && c < bracketLength - 1)
                                                                 {
-                                                                    if(array.get(e).get(a) < array.get(e).get(c))
+                                                                    if(array.get(e).get(a) != array.get(e).get(c))
                                                                     {
                                                                         break = true;
                                                                     }
