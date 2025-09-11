@@ -44,7 +44,7 @@ for(int x = 0; x < bracketLength2; x++)
 				{
 					for(int b = c; b < bracketLength; b++)
 					{
-                                                                if(e > -1 && c < dimensionLength - 1)
+                                                                if(e > -1 && c < bracketLength - 1)
                                                                 {
                                                                     if(array.get(e).get(a) < array.get(e).get(c))
                                                                     {
@@ -82,7 +82,7 @@ for(int x = 0; x < bracketLength2; x++)
                                                }
                                                arrayHolder.get(y).clear();
                               }
-                       if(c == dimensionLength - 1)
+                       if(c == bracketLength - 1)
                        {
                              c = 0;
                         }
