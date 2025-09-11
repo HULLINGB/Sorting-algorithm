@@ -41,7 +41,7 @@ for( ; ; )
                                                                     if(array[a][e] != array[c][e])                   
                                                                    {                                                                      
                                                                          brk = true;        
-                                                                         e++;                     
+                                                                        e++;
                                                                     }                                                        
                                                                 }
                                                                 if(brk == true)
@@ -75,6 +75,7 @@ for( ; ; )
                               }
                          arrayTrack.clear();
                              c = 0;
+                             e = n;
                       if(brk == true)
                       {
                            brk = false;
@@ -87,7 +88,6 @@ for( ; ; )
                            break;
                        }
 n++;
-e++;
 }                                   
 		for(int a = 0; a < bracketLength; a++)
 {	
