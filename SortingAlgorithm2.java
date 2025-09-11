@@ -65,7 +65,6 @@ for(int x = 0; x < bracketLength2; x++)
                                               {
                                                     array[a][y] = arrayHolder[a][y];
                                                }
-                                               arrayHolder.clear();
                               }
                        if(c == bracketLength - 1)
                        {
