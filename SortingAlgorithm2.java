@@ -5,10 +5,10 @@ public class SortingAlgorithm2BracketInfiniteDArray{
                                    int bracketLength = 1000;
 int bracketLength2 = 3;
 			int[][] arrayMain = new int[bracketLength][bracketLength2];
-                                   ArrayList<<Integer>> array = new ArrayList<>();
+                                   ArrayList<ArrayList<Integer>> array = new ArrayList<>();
 ArrayList<Integer> array4 = new ArrayList<>();
 ArrayList<Integer> arrayTrack = new ArrayList<>();
-ArrayList<<Integer>> arrayHolder = new ArrayList<>();
+ArrayList<ArrayList<Integer>> arrayHolder = new ArrayList<>();
  int i = 0; 
 int n = 0;
 int e = -1;
@@ -75,7 +75,7 @@ for(int x = 0; x < bracketLength2; x++)
                              {
                                                for(int a = c; a < bracketLength; a++)
                                               {
-                                                    arrayHolder.get(y).set(a, array.get(y).get(arrayTracker.get(a)));
+                                                    arrayHolder.get(y).set(a, array.get(y).get(arrayTrack.get(a)));
                                                }
                                               for(int a = c; a < bracketLength; a++)
                                               {
