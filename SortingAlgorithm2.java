@@ -38,7 +38,7 @@ for(int x = 0; x < bracketLength2; x++)
 					{
                                                                 if(e > -1 && c < bracketLength - 1)
                                                                 {
-                                                                    if(array[a][e] != array[c][e])                                                             {                                                                      brk = true;                                                         }                                                        }
+                                                                    if(array[a][e] == array[c][e])                                                             {                                                                      brk = true;                                                         }                                                        }
                                                                 if(brk == true)
                                                                 {                                                               break;                                                        }
                                                                 if(array[a][x] < array[b][x])
