@@ -10,6 +10,7 @@ public class Sort2Bracket4DArray{
                                    int e = -1;
                                    int c = 0;
                                    int i = 0;
+                                  int v = 0;
                                    int d = bracketLength;
                                    boolean brk = false;
                                    int num = 0;
@@ -34,16 +35,17 @@ public class Sort2Bracket4DArray{
                                {
                                      for(int a = c; a < bracketLength; a++)
 		             {
-			         for(int b = c + 1; b < bracketLength - 1; b++)
+                                            for(int b = c; b < bracketLength; b++)
 			         { 
                                                     if(e > -1 && e < bracketLength2)
                                                    {
                                                         if(array[a][e] != array[b][e])                   
                                                        {                                                                      
                                                             brk = true;     
-                                                             d = b - 1;  
+                                                             d = b;  
                                                         }                                                        
                                                   }
+                                                  arrayTrack.add(0);
                                                   if(brk == true)
                                                   {                                                              
                                                        break;                                                      
@@ -63,13 +65,21 @@ public class Sort2Bracket4DArray{
 			                   {
 				             hold = array[a][x];
 				             array[a][x] = array[b][x];
-				             array[b][x] = hold;                                       
-                                                            arrayTrack.add(b);                                     
-                                                            i++;                           
+				             array[b][x] = hold;             
+                                                            i++;                                                 
+                                                            v = b;
 				        }
 			            }
-                                      c = a;
+                                      if(i > 0)
+                                      {
+                                             arrayTrack.set(a, v);
+                                             i = 0;
+                                      }else{
+                                       arrayTrack.set(a, a);
+                                     }
+                                      c = a + 1;
 		      }
+                             i = 0;
                              for(int y = n; y < bracketLength2; y++)
                              {
                                                for(int a = c; a < d; a++)
@@ -86,7 +96,7 @@ public class Sort2Bracket4DArray{
                        e++;
                        }
                      c = 0;
-                     d = 0;
+                     d = bracketLength;
                      i = 0;
                      if(e == bracketLength2 - 1)
                     {
