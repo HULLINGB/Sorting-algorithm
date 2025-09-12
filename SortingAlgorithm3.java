@@ -10,10 +10,9 @@ public class Sort2Bracket4DArray{
                                    int e = -1;
                                    int c = 0;
                                    int i = 0;
-                                  int d = 1;
+                                  int d = 0;
                                   int l = 0;
                                   int v = 0;
-                                   int d = bracketLength;
                                    boolean brk = false;
                                    int num = 0;
                                    int hold = 0;
@@ -39,6 +38,7 @@ public class Sort2Bracket4DArray{
 		              {
                                            if(e > -1 && e < bracketLength2)
                                           {
+                                                d++;
                                                 if(array[a][e] != array[d][e])                   
                                                {                                                                     
                                                     brk = true;     
@@ -50,7 +50,6 @@ public class Sort2Bracket4DArray{
                                                 brk = false;
                                                 break;
                                             }
-                                           d++;
                                        }
                                      for(int a = c; a < d; a++)
 	                        {
