@@ -10,8 +10,7 @@ public class Sort2Bracket4DArray{
                                    int e = -1;
                                    int c = 0;
                                    int i = 0;
-                                  int v = 0;
-                                  int t = 1;
+                                  int d = 1;
                                   int l = 0;
                                    int d = bracketLength;
                                    boolean brk = false;
@@ -39,7 +38,7 @@ public class Sort2Bracket4DArray{
 		              {
                                            if(e > -1 && e < bracketLength2)
                                           {
-                                                if(array[a][e] != array[t][e])                   
+                                                if(array[a][e] != array[d][e])                   
                                                {                                                                     
                                                     brk = true;     
                                                 }                                                        
@@ -50,10 +49,8 @@ public class Sort2Bracket4DArray{
                                                 brk = false;
                                                 break;
                                             }
-                                           t++;
-                                       d = a + 1;
+                                           d++;
                                        }
-                                      t = 0;
                                      for(int a = c; a < d; a++)
 	                        {
 	                                for(int b = c; b < d; b++)
@@ -74,8 +71,8 @@ public class Sort2Bracket4DArray{
                                       }else{
                                        arrayTrack.set(l, l);
                                      }
-                                     l++;
-                                      c = a + 1;
+                                     l++;                   
+                                      c = d + 1;
 		      }
                              i = 0;
                              l = 0;
