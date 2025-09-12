@@ -12,6 +12,7 @@ public class Sort2Bracket4DArray{
                                    int i = 0;
                                   int d = 1;
                                   int l = 0;
+                                  int v = 0;
                                    int d = bracketLength;
                                    boolean brk = false;
                                    int num = 0;
