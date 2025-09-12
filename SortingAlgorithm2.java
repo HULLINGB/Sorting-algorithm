@@ -46,12 +46,12 @@ public class Sort2Bracket4DArray{
                                                              d = b;  
                                                         }                                                        
                                                   }
-                                                  arrayTrack.add(0);
                                                   if(brk == true)
                                                   {                                                              
                                                        break;                                                      
                                                   }
                                               }
+                                              arrayTrack.add(0);
                                               if(brk == true)
                                               {
                                                      brk = false;
@@ -71,7 +71,6 @@ public class Sort2Bracket4DArray{
                                                             v = b;
 				        }
 			            }
-                                       l++;
                                       if(i > 0)
                                       {
                                              arrayTrack.set(l, v);
@@ -79,6 +78,7 @@ public class Sort2Bracket4DArray{
                                       }else{
                                        arrayTrack.set(l, l);
                                      }
+                                     l++;
                                       c = a + 1;
 		      }
                              i = 0;
