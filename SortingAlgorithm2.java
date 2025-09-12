@@ -11,6 +11,7 @@ public class Sort2Bracket4DArray{
                                    int c = 0;
                                    int i = 0;
                                   int v = 0;
+                                  int l = 0;
                                    int d = bracketLength;
                                    boolean brk = false;
                                    int num = 0;
@@ -70,16 +71,18 @@ public class Sort2Bracket4DArray{
                                                             v = b;
 				        }
 			            }
+                                       l++;
                                       if(i > 0)
                                       {
-                                             arrayTrack.set(a, v);
+                                             arrayTrack.set(l, v);
                                              i = 0;
                                       }else{
-                                       arrayTrack.set(a, a);
+                                       arrayTrack.set(l, l);
                                      }
                                       c = a + 1;
 		      }
                              i = 0;
+                             l = 0;
                              for(int y = n; y < bracketLength2; y++)
                              {
                                                for(int a = c; a < d; a++)
