@@ -9,6 +9,7 @@ public class Sort2Bracket4DArray{
                                    int[][] arrayHolder = new int[bracketLength][bracketLength2];                             
                                    int e = -1;
                                    int c = 0;
+                                   int i = 0;
                                    int d = bracketLength;
                                    boolean brk = false;
                                    int num = 0;
@@ -63,7 +64,8 @@ public class Sort2Bracket4DArray{
 				             hold = array[a][x];
 				             array[a][x] = array[b][x];
 				             array[b][x] = hold;                                       
-                                                            arrayTrack.add(b);                                                                
+                                                            arrayTrack.add(b);                                     
+                                                            i++;                           
 				        }
 			            }
                                       c = a;
@@ -72,7 +74,8 @@ public class Sort2Bracket4DArray{
                              {
                                                for(int a = c; a < d; a++)
                                               {
-                                                    arrayHolder[a][y] = array[arrayTrack.get(a)][y];
+                                                    arrayHolder[a][y] = array[arrayTrack.get(i)][y];
+                                                    i++;
                                                }
                                               for(int a = c; a < d; a++)
                                               {
@@ -84,6 +87,7 @@ public class Sort2Bracket4DArray{
                        }
                      c = 0;
                      d = 0;
+                     i = 0;
                      if(e == bracketLength2 - 1)
                     {
                          break;
