@@ -33,35 +33,31 @@ public class Sort2Bracket4DArray{
                     }
                    for(int n = 0; n < bracketLength2; n++)
                     {
-                               for(int x = n; x < bracketLength2; x++)
-                               {
-                                     for(int a = c; a < bracketLength; a++)
-		             {
-                                                    if(e > -1 && e < bracketLength2)
-                                                   {
-                                                        if(array[a][e] != array[t][e])                   
-                                                       {                                                                      
-                                                            brk = true;     
-                                                             d = b;  
-                                                        }                                                        
-                                                  }
-                                                  if(brk == true)
-                                                  {                                                              
-                                                       break;                                                      
-                                                  }
-                                            
-                                              arrayTrack.add(0);
-                                              if(brk == true)
-                                              {
-                                                     brk = false;
-                                                     break;
-                                              }
-                                              t++;
-                                       }
-			for(int a = c; a < d; a++)
-			{
-				for(int b = c; b < d; b++)
-				{
+                           for(int x = n; x < bracketLength2; x++)
+                           {
+                                 for(int a = c; a < bracketLength; a++)
+		         {
+                                      if(e > -1 && e < bracketLength2)
+                                      {
+                                            if(array[a][e] != array[t][e])                   
+                                           {                                                                     
+                                                 brk = true;     
+                                                 d = b;  
+                                           }                                                        
+                                      }     
+                                      arrayTrack.add(0);
+                                       if(brk == true)
+                                      {
+                                          brk = false;
+                                          break;
+                                    }
+                                   t++;
+                              }
+                              t = 0;
+                               for(int a = c; a < d; a++)
+	                   {
+	                        for(int b = c; b < d; b++)
+		           {
                                                       if(array[a][x] < array[b][x])
 			                   {
 				             hold = array[a][x];
