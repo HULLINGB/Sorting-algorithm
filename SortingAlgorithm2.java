@@ -61,7 +61,7 @@ public class Sort2Bracket4DArray{
 				             array[a][x] = array[b][x];
 				             array[b][x] = hold;             
                                                             i++;                                                 
-                                                            v = b;
+                                                            v = a;
 				        }
 			            }
                                       if(i > 0)
@@ -72,12 +72,11 @@ public class Sort2Bracket4DArray{
                                        arrayTrack.set(l, l);
                                      }
                                      l++;                   
-                             }
-                             c = d + 1;
-                             i = 0;
-                             l = 0;
-                             for(int y = n; y < bracketLength2; y++)
-                             {
+                                 }  
+                                i = 0;
+                                l = 0;
+                                for(int y = n; y < bracketLength2; y++)
+                                {
                                                for(int a = c; a < d; a++)
                                               {
                                                     arrayHolder[a][y] = array[arrayTrack.get(i)][y];
@@ -87,17 +86,21 @@ public class Sort2Bracket4DArray{
                                               {
                                                     array[a][y] = arrayHolder[a][y];
                                                }
+                                }
+                                c = d + 1;
+                                arrayTrack.clear();
                               }
-                         arrayTrack.clear();
-                       e++;
-                       }
-                     c = 0;
-                     d = bracketLength;
-                     i = 0;
-                     if(e == bracketLength2 - 1)
-                    {
-                         break;
-                    }
+                             c = 0;
+                            d = 0;
+                           i = 0;
+                          if(e < bracketLength2 - 1)
+                          {
+                           e++;
+                         }
+                         if(e == bracketLength2 - 1)
+                        {
+                            break;
+                       }              
        }                                   
 for(int a = 0; a < bracketLength; a++)
 {	
