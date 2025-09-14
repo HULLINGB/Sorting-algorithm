@@ -101,7 +101,6 @@ public class Sort2Bracket4DArray{
                         {
                             break;
                        }   
-                     
                            c = 0;
                             d = 0;
                            i = 0;
