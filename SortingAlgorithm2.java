@@ -92,7 +92,6 @@ public class Sort2Bracket4DArray{
                                 }
                                 c = d + 1;
                                 arrayTrack.clear();
-                              }
                              c = 0;
                             d = 0;
                            i = 0;
@@ -104,9 +103,8 @@ public class Sort2Bracket4DArray{
                         {
                             break;
                        }   
-                     
-                    }
-                                              
+                     }
+                    }                                              
 for(int a = 0; a < bracketLength; a++)
 {	
          for(int b = 0; b < bracketLength2; b++)
