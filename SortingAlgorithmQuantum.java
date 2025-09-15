@@ -146,8 +146,8 @@ for(int a = 0; a < bracketLength; a++)
                {
                      System.out.print(", ");
                }
-              System.out.println();
         }
+System.out.println();
 }       
      }
 }
