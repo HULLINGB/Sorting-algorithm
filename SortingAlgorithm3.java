@@ -124,7 +124,7 @@ for(int a = 0; a < bracketLength; a++)
               for(int u = 0; u < bracketLength3; u++)
               {
               System.out.print(array[a][b][u]);
-               if(c < bracketLength3 - 1)
+               if(u < bracketLength3 - 1)
                {
                      System.out.print(", ");
                }
