@@ -76,7 +76,7 @@ public class Sort2Bracket4DArray{
                                  l++;
                                  }
                                 l = 0;
-                                for(int y = n; y < bracketLength2; y++)
+                                for(int y = n + 1; y < bracketLength2; y++)
                                 {
                                               i = 0;
                                                for(int a = c; a < d; a++)
