@@ -120,9 +120,9 @@ for(int a = 0; a < bracketLength; a++)
 {	
          for(int b = 0; b < bracketLength2; b++)
          {
-              for(int c = 0; c < bracketLength3; c++)
+              for(int u = 0; u < bracketLength3; u++)
               {
-              System.out.print(array[a][b][c]);
+              System.out.print(array[a][b][u]);
                if(c < bracketLength3 - 1)
                {
                      System.out.print(", ");
