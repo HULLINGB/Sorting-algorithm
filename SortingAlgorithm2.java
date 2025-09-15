@@ -90,6 +90,7 @@ public class Sort2Bracket4DArray{
                                                }
                                 }
                                 c = d + 1;
+                                i = 0;
                                 arrayTrack.clear();
 }
                            if(e < bracketLength2)
@@ -102,7 +103,6 @@ public class Sort2Bracket4DArray{
                        }   
                            c = 0;
                             d = 0;
-                           i = 0;
                     }                                              
 for(int a = 0; a < bracketLength; a++)
 {	
