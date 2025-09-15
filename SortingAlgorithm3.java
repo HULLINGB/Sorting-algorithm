@@ -2,11 +2,11 @@ import java.util.*;
 
 public class Sort3Bracket4DArray{
      public static void main(String []args){
-                                   Int bracketLength = 3;
+                                   int bracketLength = 3;
                                    int bracketLength2 = 1000;
                                    int bracketLength3 = 4;
-int[][][] array = new int[bracketLength][bracketLength2];
-			int[][] array2 = new int[bracketLength][bracketLength2][bracketLength3];
+int[][][] array = new int[bracketLength][bracketLength2][bracketLength3];
+			int[][] array2 = new int[bracketLength][bracketLength2];
                                    ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength2);
                                    int[][] arrayHolder = new int[bracketLength][bracketLength2];                             
                                    int e = -1;
@@ -134,7 +134,7 @@ for(int r = 0; r < 100; r++)
 {
       System.out.println();
 }
-System.out.println(“Next first bracket section”);
+System.out.println("Next first bracket section");
 }       
      }
 }
