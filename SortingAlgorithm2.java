@@ -63,7 +63,6 @@ public class Sort2Bracket4DArray{
                                                             i++;                                                 
                                                             v = b;
 				        }
-                                                }
                                                 if(i > 0)
                                                {
                                                     arrayTrack.set(l, v);
@@ -73,6 +72,7 @@ public class Sort2Bracket4DArray{
                                                   arrayTrack.set(l, a);
                                             }
                                            i = 0;
+                                 }
                                  l++;
                                  }
                                 l = 0;
