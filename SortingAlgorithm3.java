@@ -8,7 +8,7 @@ public class Sort3Bracket4DArray{
 int[][][] array = new int[bracketLength][bracketLength2][bracketLength3];
 			int[][] array2 = new int[bracketLength2][bracketLength3];
                                    ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength2);
-                                   int[][] arrayHolder = new int[bracketLength][bracketLength2];                             
+                                   int[][] arrayHolder = new int[bracketLength2][bracketLength3];                             
                                    int e = -1;
                                    int c = 0;
                                    int i = 0;
