@@ -108,6 +108,7 @@ int[][][] array = new int[bracketLength][bracketLength2][bracketLength3];
                             d = 0;
                            i = 0;
                     } 
+                    e = 0;
                     for(int a = 0; a < bracketLength2; a++)
                     {	
                        for(int b = 0; b < bracketLength3; b++)
@@ -138,6 +139,8 @@ System.out.println("Next first bracket section");
 }       
      }
 }
+
+
 
 
 
