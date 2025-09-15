@@ -2,9 +2,11 @@ import java.util.*;
 
 public class Sort3Bracket4DArray{
      public static void main(String []args){
-                                   int bracketLength = 1000;
-                                   int bracketLength2 = 4;
-			int[][] array = new int[bracketLength][bracketLength2];
+                                   Int bracketLength = 3;
+                                   int bracketLength2 = 1000;
+                                   int bracketLength3 = 4;
+int[][][] array = new int[bracketLength][bracketLength2];
+			int[][] array2 = new int[bracketLength][bracketLength2][bracketLength3];
                                    ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength2);
                                    int[][] arrayHolder = new int[bracketLength][bracketLength2];                             
                                    int e = -1;
@@ -22,24 +24,26 @@ public class Sort3Bracket4DArray{
 	                      System.out.println("This is not a multidimensional array");
                                   }
                                  Random rand = new Random();
-                             for(int a = 0; a < bracketLength; a++)
+                             for(int k = 0; k < bracketLength; k++)
                             {
 	                       for(int b = 0; b < bracketLength2; b++)
                          	{
+                                        for(int c = 0; c < bracketLength3; c++)
+                         	     {
 	             	       num = rand.nextInt(10);
-	 	                  array[a][b] = num;
-	                        }
-                              }
-                            for(int n = 0; n < bracketLength2; n++)
+	 	                  array2[a][b] = num;
+	                             }
+                                   }                      
+                            for(int n = 0; n < bracketLength3; n++)
                             {
-                                 for(int x = n; x < bracketLength2; x++)
+                                 for(int x = n; x < bracketLength3; x++)
                                  {
-                                      for(int a = c; a < bracketLength; a++)
+                                      for(int a = c; a < bracketLength2; a++)
 		              {
                                            if(e > -1)
                                           {
                                                 d++;
-                                                if(array[a][e] != array[d][e])                   
+                                                if(array2[a][e] != array2[d][e])                   
                                                {                                                                     
                                                     brk = true;     
                                                 }                                                        
@@ -55,7 +59,7 @@ public class Sort3Bracket4DArray{
                                         arrayTrack.add(0);
 	                                for(int b = c; b < d; b++)
 		                   {
-                                                      if(array[a][x] < array[b][x])
+                                                      if(array2[a][x] < array2[b][x])
 			                   {
 				             hold = array[a][x];
 				             array[a][x] = array[b][x];
@@ -76,22 +80,22 @@ public class Sort3Bracket4DArray{
                                  l++;
                                  }
                                 l = 0;
-                                for(int y = n + 1; y < bracketLength2; y++)
+                                for(int y = n + 1; y < bracketLength3; y++)
                                 {
                                               i = 0;
                                                for(int a = c; a < d; a++)
                                               {
-                                                    arrayHolder[a][y] = array[arrayTrack.get(i)][y];
+                                                    arrayHolder[a][y] = array2[arrayTrack.get(i)][y];
                                                     i++;
                                                }
                                               for(int a = c; a < d; a++)
                                               {
-                                                    array[a][y] = arrayHolder[a][y];
+                                                    array2[a][y] = arrayHolder[a][y];
                                                }
                                 }
                                 c = d + 1;
                                 arrayTrack.clear();
-}
+                            }
                            if(e < bracketLength2)
                           {
                            e++;
@@ -103,21 +107,39 @@ public class Sort3Bracket4DArray{
                            c = 0;
                             d = 0;
                            i = 0;
-                    }                                              
+                    } 
+                    for(int a = 0; a < bracketLength2; a++)
+                    {	
+                       for(int b = 0; b < bracketLength3; b++)
+                      {
+                             array[k][a][b] = array2[a][b];
+                       }
+                   }     
+            }                                        
 for(int a = 0; a < bracketLength; a++)
 {	
          for(int b = 0; b < bracketLength2; b++)
          {
-              System.out.print(array[a][b]);
-               if(b < bracketLength2 - 1)
+              for(int c = 0; c < bracketLength3; c++)
+              {
+              System.out.print(array[a][b][c]);
+               if(c < bracketLength3 - 1)
                {
                      System.out.print(", ");
                }
               System.out.println();
         }
+    }
+for(int r = 0; r < 100; r++)
+{
+      System.out.println();
+}
+System.out.println(“Next first bracket section”);
 }       
      }
 }
+
+
 
 
 
