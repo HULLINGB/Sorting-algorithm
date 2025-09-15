@@ -61,7 +61,7 @@ int[][][] array = new int[bracketLength][bracketLength2][bracketLength3];
 		                   {
                                                       if(array2[a][x] < array2[b][x])
 			                   {
-				             hold = array[a][x];
+				             hold = array2[a][x];
 				             array2[a][x] = array2[b][x];
 				             array2[b][x] = hold;             
                                                             i++;                                                 
