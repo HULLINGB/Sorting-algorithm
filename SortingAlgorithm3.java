@@ -5,12 +5,12 @@ public class Sort2Bracket4DArray{
                                    int bracketLength = 1000;
                                    int bracketLength2 = 4;
 			int[][] array = new int[bracketLength][bracketLength2];
-                                   ArrayList<Integer> arrayTrack = new ArrayList<>();
+                                   ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength2);
                                    int[][] arrayHolder = new int[bracketLength][bracketLength2];                             
                                    int e = -1;
                                    int c = 0;
                                    int i = 0;
-                                  int d = 0;
+                                  int d = bracketLength;
                                   int l = 0;
                                   int v = 0;
                                    boolean brk = false;
@@ -30,13 +30,13 @@ public class Sort2Bracket4DArray{
 	 	                  array[a][b] = num;
 	                        }
                               }
-                             for(int n = 0; n < bracketLength2; n++)
+                            for(int n = 0; n < bracketLength2; n++)
                             {
                                  for(int x = n; x < bracketLength2; x++)
                                  {
                                       for(int a = c; a < bracketLength; a++)
 		              {
-                                           if(e > -1 && e < bracketLength2)
+                                           if(e > -1)
                                           {
                                                 d++;
                                                 if(array[a][e] != array[d][e])                   
@@ -44,7 +44,6 @@ public class Sort2Bracket4DArray{
                                                     brk = true;     
                                                 }                                                        
                                             }     
-                                            arrayTrack.add(0);
                                             if(brk == true)
                                            {
                                                 brk = false;
@@ -53,6 +52,7 @@ public class Sort2Bracket4DArray{
                                        }
                                      for(int a = c; a < d; a++)
 	                        {
+                                        arrayTrack.add(0);
 	                                for(int b = c; b < d; b++)
 		                   {
                                                       if(array[a][x] < array[b][x])
@@ -63,21 +63,22 @@ public class Sort2Bracket4DArray{
                                                             i++;                                                 
                                                             v = b;
 				        }
-			            }
-                                      if(i > 0)
-                                      {
-                                             arrayTrack.set(l, v);
-                                             i = 0;
-                                      }else{
-                                       arrayTrack.set(l, l);
-                                     }
-                                     l++;                   
-                                      c = d + 1;
-		      }
-                             i = 0;
-                             l = 0;
-                             for(int y = n; y < bracketLength2; y++)
-                             {
+                                                if(i > 0)
+                                               {
+                                                    arrayTrack.set(l, v);
+                                               }
+                                             if(i == 0)
+                                            {
+                                                  arrayTrack.set(l, a);
+                                            }
+                                           i = 0;
+                                 }
+                                 l++;
+                                 }
+                                l = 0;
+                                for(int y = n + 1; y < bracketLength2; y++)
+                                {
+                                              i = 0;
                                                for(int a = c; a < d; a++)
                                               {
                                                     arrayHolder[a][y] = array[arrayTrack.get(i)][y];
@@ -87,18 +88,22 @@ public class Sort2Bracket4DArray{
                                               {
                                                     array[a][y] = arrayHolder[a][y];
                                                }
-                              }
-                         arrayTrack.clear();
-                       e++;
-                       }
-                     c = 0;
-                     d = bracketLength;
-                     i = 0;
-                     if(e == bracketLength2 - 1)
-                    {
-                         break;
-                    }
-       }                                   
+                                }
+                                c = d + 1;
+                                arrayTrack.clear();
+}
+                           if(e < bracketLength2)
+                          {
+                           e++;
+                         }
+                         if(e == bracketLength2)
+                        {
+                            break;
+                       }   
+                           c = 0;
+                            d = 0;
+                           i = 0;
+                    }                                              
 for(int a = 0; a < bracketLength; a++)
 {	
          for(int b = 0; b < bracketLength2; b++)
