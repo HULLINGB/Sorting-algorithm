@@ -26,9 +26,9 @@ int[][][] array = new int[bracketLength][bracketLength2][bracketLength3];
                                  Random rand = new Random();
                              for(int k = 0; k < bracketLength; k++)
                             {
-	                       for(int b = 0; b < bracketLength2; b++)
+	                       for(int a = 0; a < bracketLength2; a++)
                          	{
-                                        for(int c = 0; c < bracketLength3; c++)
+                                        for(int b = 0; b < bracketLength3; b++)
                          	     {
 	             	       num = rand.nextInt(10);
 	 	                  array2[a][b] = num;
@@ -62,8 +62,8 @@ int[][][] array = new int[bracketLength][bracketLength2][bracketLength3];
                                                       if(array2[a][x] < array2[b][x])
 			                   {
 				             hold = array[a][x];
-				             array[a][x] = array[b][x];
-				             array[b][x] = hold;             
+				             array2[a][x] = array2[b][x];
+				             array2[b][x] = hold;             
                                                             i++;                                                 
                                                             v = b;
 				        }
