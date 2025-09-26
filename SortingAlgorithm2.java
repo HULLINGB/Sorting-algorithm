@@ -16,18 +16,32 @@ public class Sort2Bracket4DArray{
             {1, 7, 2, 4},
             {0, 0, 0, 0}
         }; 
+           int[][] array2 = {
+            {0, 0, 0, 0},
+            {0, 0, 0, 2},
+            {0, 0, 0, 3},
+            {0, 0, 0, 0},
+            {0, 1, 0, 0},
+            {0, 0, 0, 0},
+            {0, 0, 0, 0},
+            {1, 0, 1, 0},
+            {1, 0, 2, 0},
+            {0, 0, 0, 0}
+        }; 
                                    ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength);
                                    int[][] arrayHolder = new int[bracketLength][bracketLength2];       
-                                  ArrayList<Integer> start = new ArrayList<>(bracketLength2);
-                                   int e = 0;
+                                  ArrayList<Integer> end = new ArrayList<>(bracketLength2);
+                                   int e = -1;
                                   int c = 0;
                                    int i = 0;
+                                  int k = 0;
                                   int d = bracketLength;
                                   int l = 0;
                                   int r = 0;       
                                   int v = 0;
                                   int z = 0;
                                    int g = bracketLength * bracketLength2;
+                                   int w = 0;
                                    boolean brk = false;
                                    int num = 0;
                                    int hold = 0;
@@ -46,60 +60,75 @@ public class Sort2Bracket4DArray{
                                    array[a][b] = num;
                                 }
                               } 
-                              **/
-for( ; ; )
-{
-                                  for(int x = 0; x < bracketLength2; x++)
-                                {                        
-                                   for(int n = e; n < bracketLength2; n++)
+                              **/  
+                                   for(int n = 0; n < bracketLength2; n++)
 {       
-                                  for( int u = r; u < bracketLength; u++)
+                                  for( int u = 0; u < bracketLength; u++)
                                   {
-                                           for(int t = u; t < bracketLength;t++)
-                                           {
-                                           if(n > 0 && d < bracketLength)
+                                            if(n > 0 && d < bracketLength)
                                           {                   
-                                          if(array[c][n] != array[d][n])   
+                                           for(int t = r; t < bracketLength;t++)
+                                           {   
+                                          if(array[c][e] != array[d][e])   
                                                {                                                 
                                                     brk = true;
                                                 }
-                                           c++;
                                            if(brk == true)
                                            {
+                                           	brk = false;
                                            	break;
                                            }
-                                          }                
-                                          brk = false;                                    
-                                    }  
-                                    z = z + d;
-                                   start.add(c + 1);
+                                                c++;
+                                           d++;
+                                          }                                              
+                                    } 
                                      for(int a = r; a < d; a++)
                                 {
-                                        arrayTrack.add(0);
                                         for(int b = r; b < d; b++)
                                    {
-                                                      i = 0;
+                                                      if(array[a][n] < array[b][n])
+                                           {
+                                             hold = array[a][n];
+                                             array2[a][n] = array[b][n];
+                                             array2[b][n] = hold;
+                                        }
+}
+                                 }                       
+for(int a = r; a < d; a++)
+{
+	arrayTrack.add(0);
+	}    
+for(int a = r; a < d; a++)
+{
+             for(int b = r + 1; b < d; b++)
+            {
+             if(array[a][n] == array2[b][n])
+            {
+                    arrayTrack.set(l, b);
+                    w++;
+                   break;
+            }
+}
+if(w == 0)
+{
+	  arrayTrack.set(l, a);
+}
+w = 0;
+l++;
+}
+l = 0;
+for(int a = r; a < d; a++)
+                                {
+                                        for(int b = r; b < d; b++)
+                                   {
                                                       if(array[a][n] < array[b][n])
                                            {
                                              hold = array[a][n];
                                              array[a][n] = array[b][n];
-                                             array[b][n] = hold;             
-                                                            i++;                                                 
-                                                            v = b;
+                                             array[b][n] = hold;                     
                                         }
-                                                if(i > 0)
-                                               {
-                                                    arrayTrack.set(l, v);
-                                               }
-                                             if(i == 0)
-                                            {
-                                                  arrayTrack.set(l, a);
-                                            }
-                                           
+}
                                  }
-                                 l++;
-                                 }
-                                l = 0;
                                 for(int y = n + 1; y < bracketLength2; y++)
                                 {
                                               i = 0;
@@ -112,20 +141,19 @@ for( ; ; )
                                               {
                                                     array[a][y] = arrayHolder[a][y];
                                                }                                           
-                                } 
-                                  }
-                           r = start.get(x);  
-                               
-                         }          
-                         e++;                              
-                  }
-                  e = 0;
-                  start.clear();
-                  if(z >= g - 1)
-                 {
-                    break;
-                  }                           
-}                               
+                             }
+                             arrayTrack.clear();
+                              r = d;
+                              if(r == bracketLength)
+                              {
+                                    break;
+                               }
+                                }  
+                                c = 0;
+                                d = 1;
+                                  r = 0;
+                                  e++;
+                         } 
 for(int a = 0; a < bracketLength; a++)
 {        
          for(int b = 0; b < bracketLength2; b++)
@@ -140,13 +168,5 @@ System.out.println();
 }       
      }
 }
-
-
-
-
-
-
-
-
 
 
