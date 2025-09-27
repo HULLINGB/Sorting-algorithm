@@ -93,18 +93,34 @@ public class Sort2Bracket4DArray{
                                              array2[b][n] = hold;
                                         }
 }
-                                 }                       
+                                 }                 
+v = r;      
 for(int a = r; a < d; a++)
 {
 	arrayTrack.add(0);
 	}    
 for(int a = r; a < d; a++)
 {
-             for(int b = r + 1; b < d; b++)
+             for(int b = v; b < d; b++)
             {
              if(array[a][n] == array2[b][n])
             {
+                    v = b;
+                    for(int f = 0; f < arrayTrack.size(); f++)
+                    {
+                           if(b == arrayTrack.get(f))
+                           {
+                                  v++;
+                                 match= true;
+                           }
+                    }
+                   if(match == true)
+                   {
+                    arrayTrack.set(l, v);
+                    match = false;
+                  }else{
                     arrayTrack.set(l, b);
+                   }
                     w++;
                    break;
             }
