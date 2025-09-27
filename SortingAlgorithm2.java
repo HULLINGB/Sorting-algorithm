@@ -96,7 +96,7 @@ public class Sort2Bracket4DArray{
 }
                                  }                 
 v = r;      
-for(int a = r; a < d a++)
+for(int a = r; a < d; a++)
 {
 	arrayTrack.add(0);
 	}    
@@ -185,5 +185,7 @@ System.out.println();
 }       
      }
 }
+
+
 
 
