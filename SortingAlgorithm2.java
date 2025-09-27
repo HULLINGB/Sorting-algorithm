@@ -43,6 +43,7 @@ public class Sort2Bracket4DArray{
                                    int g = bracketLength * bracketLength2;
                                    int w = 0;
                                    boolean brk = false;
+                                   boolean dup = false;
                                    int num = 0;
                                    int hold = 0;
                                    if (array.getClass().getComponentType().isArray()) {
@@ -95,13 +96,13 @@ public class Sort2Bracket4DArray{
 }
                                  }                 
 v = r;      
-for(int a = r; a < d; a++)
+for(int a = r; a < d a++)
 {
 	arrayTrack.add(0);
 	}    
 for(int a = r; a < d; a++)
 {
-             for(int b = v; b < d; b++)
+             for(int b = r; b < d; b++)
             {
              if(array[a][n] == array2[b][n])
             {
@@ -111,13 +112,13 @@ for(int a = r; a < d; a++)
                            if(b == arrayTrack.get(f))
                            {
                                   v++;
-                                 match= true;
+                                 dup = true;
                            }
                     }
-                   if(match == true)
+                   if(dup == true)
                    {
                     arrayTrack.set(l, v);
-                    match = false;
+                    dup = false;
                   }else{
                     arrayTrack.set(l, b);
                    }
@@ -164,7 +165,7 @@ for(int a = r; a < d; a++)
                               {
                                     break;
                                }
-                                }  
+                                }
                                 c = 0;
                                 d = 1;
                                   r = 0;
