@@ -29,8 +29,7 @@ public class Sort2Bracket4DArray{
             {0, 0, 0, 0}
         }; 
                                    ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength);
-                                   int[][] arrayHolder = new int[bracketLength][bracketLength2];       
-                                  ArrayList<Integer> end = new ArrayList<>(bracketLength2);
+                                   int[][] arrayHolder = new int[bracketLength][bracketLength2];      
                                    int e = -1;
                                   int c = 0;
                                    int i = 0;
@@ -107,9 +106,9 @@ for(int a = r; a < d; a++)
              if(array[a][n] == array2[b][n])
             {
                     v = b;
-                    for(int f = 0; f < arrayTrack.size(); f++)
+                    for(int f = l; f < arrayTrack.size(); f++)
                     {
-                           if(b == arrayTrack.get(f))
+                           if(f == arrayTrack.get(f))
                            {
                                   v++;
                                  dup = true;
@@ -185,7 +184,3 @@ System.out.println();
 }       
      }
 }
-
-
-
-
