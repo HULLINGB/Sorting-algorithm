@@ -16,7 +16,6 @@ public class Sort2Bracket4DArray{
             {1, 7, 2, 4},
             {0, 0, 0, 0}
         }; 
-           
                         int[][] array2 = {
             {0, 0, 0, 6},
             {0, 4, 0, 2},
@@ -35,12 +34,10 @@ public class Sort2Bracket4DArray{
                                    int e = -1;
                                   int c = 0;
                                    int i = 0;
-                                  int k = 0;
                                   int d = bracketLength;
                                   int r = 0;       
                                   int v = 0;
                                   int z = 0;
-                                   int g = bracketLength * bracketLength2;
                                    int w = 0;
                                    boolean brk = false;
                                    boolean dup = false;
