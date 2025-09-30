@@ -1,9 +1,10 @@
-import java.util.*;
-
+import java.util.ArrayList;
+Import java.util.Random;
 public class SortingAlgorithmQuantum{
      public static void main(String []args){
                                    int bracketLength = 200000000;
                                    int bracketLength2 = 4;
+int[][] arrayOld = new int[bracketLength][bracketLength2];
 ArrayList<ArrayList<Integer>> array = new ArrayList<>();
 ArrayList<Integer> array1 = ArrayList<>(bracketLength);
 ArrayList<Integer> array2 = ArrayList<>(bracketLength);
