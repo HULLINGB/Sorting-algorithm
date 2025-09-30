@@ -28,7 +28,6 @@ public class Sort2Bracket4DArray{
             {1, 0, 2, 0},
             {0, 0, 0, 0}
         }; 
-
                                    ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength);
                                    int[][] arrayHolder = new int[bracketLength][bracketLength2];      
                                    int e = -1;
