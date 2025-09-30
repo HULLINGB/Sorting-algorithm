@@ -62,81 +62,107 @@ array4.add(result4.getInt(t));
 array.add(array1);
 array.add(array2);
 array.add(array3);
-array.add(array4);
-                            for(int n = 1; n < bracketLength2; n++)
-                            {
-                                 for(int x = n; x < bracketLength2; x++)
-                                 {
-                                      for(int a = c; a < bracketLength; a++)
-		              {
-                                           if(e > -1)
-                                          {
-                                                d++;
-                                                if(array.get(e).get(a) != array.get(e).get(d)                   
-                                               {                                                                     
-                                                    brk = true;     
-                                                }                                                        
-                                            }     
-                                            if(brk == true)
+array.add(array4);               
+for(int a = 0; a < bracketLength2; a++)
+{
+for(int b = r; b < d; b++)
+{
+      arrayOld[b][a] = array.get(a).get(b);
+}
+}
+                                   for(int n = 0; n < bracketLength2; n++)
+{       
+                                  for( int u = 0; u < bracketLength; u++)
+                                  {
+                                            if(n > 0 && d < bracketLength)
+                                          {                   
+                                           for(int t = r; t < bracketLength;t++)
+                                           {   
+                                          if(array.get(e).get(c) != array.get(e).get(d))   
+                                               {                                                 
+                                                    brk = true;
+                                                }
+                                           if(brk == true)
                                            {
-                                                brk = false;
-                                                break;
-                                            }
-                                       }
-                                     for(int a = c; a < d; a++)
-	                        {
-                                        arrayTrack.add(0);
-	                                for(int b = c; b < d; b++)
-		                   {
-                                                      if(array.get(x).get(a) < array.get(x).get(a))
-			                   {
-				             hold = array.get(x).get(a);
-				             array.get(x).set(a, array.get(x).get(b);
-				             array.get(x).set(b, hold);             
-                                                            i++;                                                 
-                                                            v = b;
-				        }
-                                                if(i > 0)
-                                               {
-                                                    arrayTrack.set(l, v);
-                                               }
-                                             if(i == 0)
-                                            {
-                                                  arrayTrack.set(l, a);
-                                            }
-                                           i = 0;
-                                 }
-                                 l++;
-                                 }
-                                l = 0;
+                                           	brk = false;
+                                           	break;
+                                           }
+                                                c++;
+                                           d++;
+                                          }                                              
+                                    } 
+                                     for(int a = r; a < d; a++)
+                                {
+                                        for(int b = r; b < d; b++)
+                                   {
+                                                      if(array.get(n).get(a) < array.get(n).get(b))
+                                           {
+                                             hold = array.get(n).get(a);
+                                             array.get(n).get(a) = array.get(n).get(b);
+                                             array.get(n).get(b) = hold;
+                                        }
+}
+                             }                
+v = r;      
+for(int a = r; a < d; a++)
+{
+	arrayTrack.add(0);
+	}    
+for(int a = r; a < d; a++)
+{
+             for(int b = r; b < d; b++)
+            {
+             if(arrayOld[b][n] == array.get(n).get(a))
+            {
+                    v = b;
+                    for(int f = b; f < d; f++)
+                    {
+                           if(f == arrayTrack.get(f))
+                           {
+                                  v++;
+                                 dup = true;
+                           }
+                    }
+                   if(dup == true)
+                   {
+                    arrayTrack.set(a, v);
+                    dup = false;
+                  }else{
+                    arrayTrack.set(a, b);
+                   }
+                    w++;
+                   break;
+            }
+}
+if(w == 0)
+{
+	  arrayTrack.set(a, a);
+}
+w = 0;
+}
                                 for(int y = n + 1; y < bracketLength2; y++)
                                 {
-                                              i = 0;
-                                               for(int a = c; a < d; a++)
+                                               for(int a = r; a < d; a++)
                                               {
-                                                    arrayHolder.get(y).set(a, array.get(y).get(arrayTrack.get(i)));
-                                                    i++;
+                                                    arrayHolder[a][y] = array.get(y).get(arrayTrack.get(a);
                                                }
-                                              for(int a = c; a < d; a++)
+                                              for(int a = r; a < d; a++)
                                               {
-                                                    array.get(y).set(a, arrayHolder.get(y).get(a));
-                                               }
+                                                    array.get(y).get(a) = arrayHolder[a][y];
+                                               }                                           
+                             }      
+                              r = d;
+                              if(r == bracketLength)
+                              {
+                                    break;
+                               }
                                 }
-                                c = d + 1;
                                 arrayTrack.clear();
-}
-                           if(e < bracketLength2)
-                          {
-                           e++;
-                         }
-                         if(e == bracketLength2)
-                        {
-                            break;
-                       }   
-                           c = 0;
-                            d = 0;
-                           i = 0;
-                    }                                              
+                                c = 0;
+                                d = 1;
+                                  r = 0;
+                                  e++;
+                         }                                               
 for(int a = 0; a < bracketLength; a++)
 {	
          for(int b = 0; b < bracketLength2; b++)
