@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 public class Sort2Bracket4DArray{
      public static void main(String []args){
                                    int bracketLength = 10;
@@ -36,7 +35,6 @@ public class Sort2Bracket4DArray{
                                   int d = bracketLength;
                                   int r = 0;       
                                   int v = 0;
-                                  int z = 0;
                                    int w = 0;
                                    boolean brk = false;
                                    boolean dup = false;
@@ -75,13 +73,8 @@ for(int b = r; b < d; b++)
                                            {   
                                           if(array[c][e] != array[d][e])   
                                                {                                                 
-                                                    brk = true;
+                                                    break;
                                                 }
-                                           if(brk == true)
-                                           {
-                                           	brk = false;
-                                           	break;
-                                           }
                                                 c++;
                                            d++;
                                           }                                              
