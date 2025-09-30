@@ -1,21 +1,26 @@
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.Random;
 public class Sort3Bracket4DArray{
      public static void main(String []args){
                                    int bracketLength = 3;
-                                   int bracketLength2 = 1000;
+                                   int bracketLength2 = 10;
                                    int bracketLength3 = 4;
-int[][][] array = new int[bracketLength][bracketLength2][bracketLength3];
-                        int[][] array2 = new int[bracketLength2][bracketLength3];
-                                   ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength2);
-                                   int[][] arrayHolder = new int[bracketLength2][bracketLength3];                             
+                        int[][][] array = new int[bracketLength][bracketLength2][bracketLength3];
+int[][][] array2 = new int[bracketLength][bracketLength2][bracketLength3];
+int[][] array3 = new int[bracketLength2][bracketLength3];
+int[][] array4 = new int[bracketLength2][bracketLength3];
+ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength2);
+                                   int[][] arrayHolder = new int[bracketLength2][bracketLength3];      
                                    int e = -1;
-                                   int c = 0;
                                    int i = 0;
-                                  int d = bracketLength;
-                                  int l = 0;
+                                  int k = 0;
+                                  int d = bracketLength2;
+                                  int r = 0;       
                                   int v = 0;
+                                  int z = 0;
+                                   int w = 0;
                                    boolean brk = false;
+                                   boolean dup = false;
                                    int num = 0;
                                    int hold = 0;
                                    if (array.getClass().getComponentType().isArray()) {
@@ -23,119 +28,142 @@ int[][][] array = new int[bracketLength][bracketLength2][bracketLength3];
                                   }else{
                               System.out.println("This is not a multidimensional array");
                                   }
+for(int x = 0; x < bracketLength; x++)
+                            {
                                  Random rand = new Random();
-                             for(int k = 0; k < bracketLength; k++)
+                             for(int a = 0; a < bracketLength2; a++)
                             {
-                               for(int a = 0; a < bracketLength2; a++)
+                               for(int b = 0; b < bracketLength3; b++)
                                  {
-                                        for(int b = 0; b < bracketLength3; b++)
-                                      {
                                     num = rand.nextInt(10);
-                                   array2[a][b] = num;
-                                     }
-                                   }                      
-                            for(int n = 0; n < bracketLength3; n++)
-                            {
-                                 for(int x = n; x < bracketLength3; x++)
-                                 {
-                                      for(int a = c; a < bracketLength2; a++)
-                              {
-                                           if(e > -1)
-                                          {
-                                                d++;
-                                                if(array2[a][e] != array2[d][e])                   
-                                               {                                                                     
-                                                    brk = true;     
-                                                }                                                        
-                                            }     
-                                            if(brk == true)
+                                   array3[a][b] = num;
+                                }
+                              } 
+for(int a = 0; a < bracketLength3; a++)
+{
+for(int b = 0; b < bracketLength2; b++)
+{
+      array4[b][a] = array3[b][a];
+}
+}
+                                   for(int n = 0; n < bracketLength3; n++)
+{       
+                                  for( int u = 0; u < bracketLength2; u++)
+                                  {
+                                            if(n > 0 && d < bracketLength2)
+                                          {                   
+                                           for(int t = r; t < bracketLength2;t++)
+                                           {   
+                                          if(array3[i][e] != array3[d][e])   
+                                               {                                                 
+                                                    brk = true;
+                                                }
+                                           if(brk == true)
                                            {
-                                                brk = false;
-                                                break;
-                                            }
-                                       }
-                                     for(int a = c; a < d; a++)
+                                           	brk = false;
+                                           	break;
+                                           }
+                                                i++;
+                                           d++;
+                                          }                                              
+                                    } 
+                                     for(int a = r; a < d; a++)
                                 {
-                                        arrayTrack.add(0);
-                                        for(int b = c; b < d; b++)
+                                        for(int b = r; b < d; b++)
                                    {
-                                                      if(array2[a][x] < array2[b][x])
+                                                      if(array3[a][n] < array3[b][n])
                                            {
-                                             hold = array2[a][x];
-                                             array2[a][x] = array2[b][x];
-                                             array2[b][x] = hold;             
-                                                            i++;                                                 
-                                                            v = b;
+                                             hold = array3[a][n];
+                                             array3[a][n] = array3[b][n];
+                                             array3[b][n] = hold;
                                         }
-                                                if(i > 0)
-                                               {
-                                                    arrayTrack.set(l, v);
-                                               }
-                                             if(i == 0)
-                                            {
-                                                  arrayTrack.set(l, a);
-                                            }
-                                           i = 0;
-                                 }
-                                 l++;
-                                 }
-                                l = 0;
+}
+                             }                
+v = r;      
+for(int a = r; a < d; a++)
+{
+	arrayTrack.add(0);
+	}    
+for(int a = r; a < d; a++)
+{
+             for(int b = r; b < d; b++)
+            {
+             if(array4[b][n] == array3[a][n])
+            {
+                    v = b;
+                    for(int f = b; f < d; f++)
+                    {
+                           if(f == arrayTrack.get(f))
+                           {
+                                  v++;
+                                 dup = true;
+                           }
+                    }
+                   if(dup == true)
+                   {
+                    arrayTrack.set(a, v);
+                    dup = false;
+                  }else{
+                    arrayTrack.set(a, b);
+                   }
+                    w++;
+                   break;
+            }
+}
+if(w == 0)
+{
+	  arrayTrack.set(a, a);
+}
+w = 0;
+}
                                 for(int y = n + 1; y < bracketLength3; y++)
                                 {
-                                              i = 0;
-                                               for(int a = c; a < d; a++)
+                                               for(int a = r; a < d; a++)
                                               {
-                                                    arrayHolder[a][y] = array2[arrayTrack.get(i)][y];
-                                                    i++;
+                                                    arrayHolder[a][y] = array3[arrayTrack.get(a)][y];
                                                }
-                                              for(int a = c; a < d; a++)
+                                              for(int a = r; a < d; a++)
                                               {
-                                                    array2[a][y] = arrayHolder[a][y];
-                                               }
+                                                    array3[a][y] = arrayHolder[a][y];
+                                               }                                           
+                             }      
+                              r = d;
+                              if(r == bracketLength)
+                              {
+                                    break;
+                               }
                                 }
-                                c = d + 1;
                                 arrayTrack.clear();
-                            }
-                           if(e < bracketLength2)
-                          {
-                           e++;
-                         }
-                         if(e == bracketLength2)
-                        {
-                            break;
-                       }   
-                           c = 0;
-                            d = 0;
-                           i = 0;
-                    } 
-                    e = 0;
-                    for(int a = 0; a < bracketLength2; a++)
-                    {        
-                       for(int b = 0; b < bracketLength3; b++)
-                      {
-                             array[k][a][b] = array2[a][b];
-                       }
-                   }     
-            }                                        
+                                i = 0;
+                                d = 1;
+                                  r = 0;
+                                  e++;
+                         } 
+for(int a = 0; a < bracketLength2; a++)
+{
+for(int b = 0; b < bracketLength3; b++)
+{
+       array[x][a][b] = array3[a][b];
+}
+}
+e = 0;
+}
 for(int a = 0; a < bracketLength; a++)
 {        
          for(int b = 0; b < bracketLength2; b++)
          {
-              for(int u = 0; u < bracketLength3; u++)
-              {
-              System.out.print(array[a][b][u]);
-               if(u < bracketLength3 - 1)
+for(int c = 0; c < bracketLength3; c++)
+         {
+              System.out.print(array[a][b][c]);
+               if(c < bracketLength3 - 1)
                {
                      System.out.print(", ");
                }
-          }
-         System.out.println();
-    }
-for(int r = 0; r < 100; r++)
-{
-      System.out.println();
+             }
+System.out.println();
 }
-System.out.println("Next first bracket section");
+System.out.println();
+System.out.println();
 }       
      }
 }
