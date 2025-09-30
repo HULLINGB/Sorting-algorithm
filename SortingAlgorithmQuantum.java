@@ -145,7 +145,7 @@ w = 0;
                                 {
                                                for(int a = r; a < d; a++)
                                               {
-                                                    arrayHolder[a][y] = array.get(y).get(arrayTrack.get(a);
+                                                    arrayHolder[a][y] = array.get(y).get(arrayTrack.get(a));
                                                }
                                               for(int a = r; a < d; a++)
                                               {
