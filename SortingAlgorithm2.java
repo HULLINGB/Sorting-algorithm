@@ -42,7 +42,8 @@ public class Sort2Bracket4DArray{
                                    boolean dup = false;
                                    int num = 0;
                                    int hold = 0;
-                                   if (array.getClass().getComponentType().isArray()) {
+                                   if(array.getClass().getComponentType().isArray()) 
+{
                                System.out.println("This is a multidimensional array");
                                   }else{
                               System.out.println("This is not a multidimensional array");
