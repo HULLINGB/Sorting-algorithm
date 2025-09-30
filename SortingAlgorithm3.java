@@ -128,7 +128,7 @@ w = 0;
                                                }                                           
                              }      
                               r = d;
-                              if(r == bracketLength)
+                              if(r == bracketLength2)
                               {
                                     break;
                                }
@@ -167,4 +167,6 @@ System.out.println();
 }       
      }
 }
+
+
 
