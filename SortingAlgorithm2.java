@@ -16,18 +16,20 @@ public class Sort2Bracket4DArray{
             {1, 7, 2, 4},
             {0, 0, 0, 0}
         }; 
-           int[][] array2 = {
-            {0, 0, 0, 0},
-            {0, 0, 0, 2},
-            {0, 0, 0, 3},
-            {0, 0, 0, 0},
+           
+                        int[][] array2 = {
+            {0, 0, 0, 6},
+            {0, 4, 0, 2},
+            {3, 0, 0, 3},
+            {3, 0, 0, 0},
             {0, 1, 0, 0},
-            {0, 0, 0, 0},
-            {0, 0, 0, 0},
+            {2, 0, 0, 0},
+            {2, 0, 2, 0},
             {1, 0, 1, 0},
             {1, 0, 2, 0},
             {0, 0, 0, 0}
         }; 
+
                                    ArrayList<Integer> arrayTrack = new ArrayList<>(bracketLength);
                                    int[][] arrayHolder = new int[bracketLength][bracketLength2];      
                                    int e = -1;
@@ -35,7 +37,6 @@ public class Sort2Bracket4DArray{
                                    int i = 0;
                                   int k = 0;
                                   int d = bracketLength;
-                                  int l = 0;
                                   int r = 0;       
                                   int v = 0;
                                   int z = 0;
@@ -61,6 +62,13 @@ public class Sort2Bracket4DArray{
                                 }
                               } 
                               **/  
+for(int a = 0; a < bracketLength2; a++)
+{
+for(int b = r; b < d; b++)
+{
+      array2[b][a] = array[b][a];
+}
+}
                                    for(int n = 0; n < bracketLength2; n++)
 {       
                                   for( int u = 0; u < bracketLength; u++)
@@ -89,11 +97,11 @@ public class Sort2Bracket4DArray{
                                                       if(array[a][n] < array[b][n])
                                            {
                                              hold = array[a][n];
-                                             array2[a][n] = array[b][n];
-                                             array2[b][n] = hold;
+                                             array[a][n] = array[b][n];
+                                             array[b][n] = hold;
                                         }
 }
-                                 }                 
+                             }                
 v = r;      
 for(int a = r; a < d; a++)
 {
@@ -103,10 +111,10 @@ for(int a = r; a < d; a++)
 {
              for(int b = r; b < d; b++)
             {
-             if(array[a][n] == array2[b][n])
+             if(array2[b][n] == array[a][n])
             {
                     v = b;
-                    for(int f = l; f < arrayTrack.size(); f++)
+                    for(int f = b; f < d; f++)
                     {
                            if(f == arrayTrack.get(f))
                            {
@@ -116,10 +124,10 @@ for(int a = r; a < d; a++)
                     }
                    if(dup == true)
                    {
-                    arrayTrack.set(l, v);
+                    arrayTrack.set(a, v);
                     dup = false;
                   }else{
-                    arrayTrack.set(l, b);
+                    arrayTrack.set(a, b);
                    }
                     w++;
                    break;
@@ -127,44 +135,28 @@ for(int a = r; a < d; a++)
 }
 if(w == 0)
 {
-	  arrayTrack.set(l, a);
+	  arrayTrack.set(a, a);
 }
 w = 0;
-l++;
 }
-l = 0;
-for(int a = r; a < d; a++)
-                                {
-                                        for(int b = r; b < d; b++)
-                                   {
-                                                      if(array[a][n] < array[b][n])
-                                           {
-                                             hold = array[a][n];
-                                             array[a][n] = array[b][n];
-                                             array[b][n] = hold;                     
-                                        }
-}
-                                 }
                                 for(int y = n + 1; y < bracketLength2; y++)
                                 {
-                                              i = 0;
                                                for(int a = r; a < d; a++)
                                               {
-                                                    arrayHolder[a][y] = array[arrayTrack.get(i)][y];
-                                                    i++;
+                                                    arrayHolder[a][y] = array[arrayTrack.get(a)][y];
                                                }
                                               for(int a = r; a < d; a++)
                                               {
                                                     array[a][y] = arrayHolder[a][y];
                                                }                                           
-                             }
-                             arrayTrack.clear();
+                             }      
                               r = d;
                               if(r == bracketLength)
                               {
                                     break;
                                }
                                 }
+                                arrayTrack.clear();
                                 c = 0;
                                 d = 1;
                                   r = 0;
@@ -184,3 +176,6 @@ System.out.println();
 }       
      }
 }
+
+
+
