@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Sort2Bracket4DArray{
-     public static void main(String []args){
+     public static void main(String[] args){
                                    int bracketLength = 10;
                                    int bracketLength2 = 4;
                         int[][] array = {
