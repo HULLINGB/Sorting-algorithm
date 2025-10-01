@@ -97,13 +97,13 @@ for(int b = r; b < d; b++)
 v = r;      
 for(int a = r; a < d; a++)
 {
-	arrayTrack.add(0);
-	}    
+        arrayTrack.add(0);
+        }    
 for(int a = r; a < d; a++)
 {
              for(int b = r; b < d; b++)
             {
-             if(array2[b][n] == array[a][n])
+             if(array2[a][n] == array[b][n])
             {
                     v = b;
                     for(int f = b; f < d; f++)
@@ -127,7 +127,7 @@ for(int a = r; a < d; a++)
 }
 if(w == 0)
 {
-	  arrayTrack.set(a, a);
+          arrayTrack.set(a, a);
 }
 w = 0;
 }
@@ -168,3 +168,4 @@ System.out.println();
 }       
      }
 }
+
