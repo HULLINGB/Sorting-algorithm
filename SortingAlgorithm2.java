@@ -97,18 +97,15 @@ for(int b = r; b < d; b++)
 v = r;      
 for(int a = r; a < d; a++)
 {
-        arrayTrack.add(0);
-        }    
-for(int a = r; a < d; a++)
-{
              for(int b = r; b < d; b++)
             {
              if(array2[a][n] == array[b][n])
             {
                     v = b;
-                    for(int f = b; f < d; f++)
+                   arrayTrack.add(b);
+                    for(int f = r; f < arrayTrack.size() - 1; f++)
                     {
-                           if(f == arrayTrack.get(f))
+                           if(b == arrayTrack.get(f))
                            {
                                   v++;
                                  dup = true;
@@ -118,16 +115,14 @@ for(int a = r; a < d; a++)
                    {
                     arrayTrack.set(a, v);
                     dup = false;
-                  }else{
-                    arrayTrack.set(a, b);
-                   }
+                  }
                     w++;
                    break;
             }
 }
 if(w == 0)
 {
-          arrayTrack.set(a, a);
+          arrayTrack.add(a);
 }
 w = 0;
 }
@@ -168,4 +163,6 @@ System.out.println();
 }       
      }
 }
+
+
 
