@@ -5,6 +5,19 @@ public class Sort2Bracket4DArray{
      public static void main(String[] args){
                                    int bracketLength = 10;
                                    int bracketLength2 = 4;
+int[][] array = {
+            {9, 8, 7, 6},
+            {8, 4, 9, 2},
+            {7, 0, 8, 3},
+            {6, 2, 7, 0},
+            {5, 1, 9, 0},
+            {4, 9, 7, 0},
+            {3, 4, 2, 0},
+            {2, 7, 1, 0},
+            {1, 7, 2, 4},
+            {0, 0, 0, 0}
+        }; 
+/**
                         int[][] array = {
             {9, 8, 7, 6},
             {5, 4, 9, 2},
@@ -17,6 +30,7 @@ public class Sort2Bracket4DArray{
             {1, 7, 2, 4},
             {0, 0, 0, 0}
         }; 
+**/
                         int[][] array2 = {
             {0, 0, 0, 6},
             {0, 4, 0, 2},
