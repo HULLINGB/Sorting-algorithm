@@ -5,6 +5,7 @@ public class Sort2Bracket4DArray{
      public static void main(String[] args){
                                    int bracketLength = 10;
                                    int bracketLength2 = 4;
+                                   /**
 int[][] array = {
             {9, 8, 7, 6},
             {8, 4, 9, 2},
@@ -17,11 +18,11 @@ int[][] array = {
             {1, 7, 2, 4},
             {0, 0, 0, 0}
         }; 
-/**
+**/
                         int[][] array = {
             {9, 8, 7, 6},
             {5, 4, 9, 2},
-            {3, 0, 8, 3},
+            {4, 0, 8, 3},
             {3, 2, 7, 0},
             {3, 1, 9, 0},
             {2, 9, 7, 0},
@@ -30,7 +31,7 @@ int[][] array = {
             {1, 7, 2, 4},
             {0, 0, 0, 0}
         }; 
-**/
+
                         int[][] array2 = {
             {0, 0, 0, 6},
             {0, 4, 0, 2},
@@ -108,7 +109,7 @@ for(int b = r; b < d; b++)
                                         }
 }
                              }                
-v = r;      
+v = r - 1;     
 for(int a = r; a < d; a++)
 {
              for(int b = r; b < d; b++)
@@ -116,8 +117,8 @@ for(int a = r; a < d; a++)
              if(array2[a][n] == array[b][n])
             {
                     v = b;
-                   arrayTrack.add(b);
-                    for(int f = r; f < arrayTrack.size() - 1; f++)
+                   arrayTrack.add(v);
+                    for(int f = 0; f < arrayTrack.size() - 1; f++)
                     {
                            if(b == arrayTrack.get(f))
                            {
@@ -152,7 +153,7 @@ w = 0;
                                                }                                           
                              }      
                               r = d;
-                              if(r == bracketLength)
+                              if(r >= bracketLength)
                               {
                                     break;
                                }
@@ -177,6 +178,10 @@ System.out.println();
 }       
      }
 }
+
+
+
+
 
 
 
