@@ -79,7 +79,7 @@ for(int b = 0; b < bracketLength2; b++)
                                         }
 }
                              }                
-v = r;      
+v = r - 1;      
 for(int a = r; a < d; a++)
 {
 	arrayTrack.add(0);
