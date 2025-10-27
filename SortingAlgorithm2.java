@@ -109,7 +109,6 @@ for(int b = r; b < d; b++)
                                         }
 }
                              }                
-v = r - 1;     
 for(int a = r; a < d; a++)
 {
              for(int b = r; b < d; b++)
@@ -141,24 +140,29 @@ if(w == 0)
 }
 w = 0;
 }
+int q = 0;
                                 for(int y = n + 1; y < bracketLength2; y++)
                                 {
+                                               q = 0;
                                                for(int a = r; a < d; a++)
                                               {
-                                                    arrayHolder[a][y] = array[arrayTrack.get(a)][y];
+                                                    arrayHolder[a][y] = array[arrayTrack.get(q)][y];
+                                                    q++;
                                                }
                                               for(int a = r; a < d; a++)
                                               {
                                                     array[a][y] = arrayHolder[a][y];
                                                }                                           
                              }      
+                             arrayTrack.clear();
+                                  
                               r = d;
-                              if(r >= bracketLength)
+                              if(r >= bracketLength - 1)
                               {
                                     break;
                                }
-                                }
-                                arrayTrack.clear();
+                                  }
+                                  
                                 c = 0;
                                 d = 1;
                                   r = 0;
